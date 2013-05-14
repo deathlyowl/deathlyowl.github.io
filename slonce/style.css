@@ -155,9 +155,21 @@ body {
 #appStore h1{font-size: 30px; font-weight: 400; line-height: 32px;}
 #appStore h2{font-size: 13px; font-weight: 400; line-height: 13px;}
 
-#glyphish{
+#weare{
 	height:20px;
 	width:226px;
+	position:fixed;
+	top:20px;
+	left:20px;
+	opacity: .8;
+	line-height: 20px;
+	color: #888;
+	font-size: 14px;
+}
+
+#glyphish{
+	height:20px;
+	width:180px;
 	position:fixed;
 	bottom:20px;
 	right:20px;

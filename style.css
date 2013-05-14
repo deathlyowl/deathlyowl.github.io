@@ -1,0 +1,66 @@
+* {margin:0; padding:0;}
+
+@-webkit-keyframes backgroundAnimation {
+	0% { 	background-position: left top; }
+	100% { 	background-position: right bottom; }
+}
+@keyframes backgroundAnimation {
+	0% { 	background-position: left top; }
+	100% { 	background-position: right bottom; }
+}
+
+html, body, #labels { height: 100%; width: 100%;}
+a { color:white; text-decoration:none; }
+body {
+	font-family: "Noto Sans";
+	background: #f0f1e5 url(background.png);
+}
+
+.inactive{opacity: .5;}
+
+/* Animations */
+body {
+	-webkit-animation: backgroundAnimation 	linear 12s infinite; 
+	animation: backgroundAnimation 	linear 12s infinite; 
+}
+
+#apps{
+height:391px;}
+
+#dock {
+background: #666;
+border-bottom: 2px solid #999;
+height: 67px;}
+
+/* Screen */
+#screen {
+	position:fixed;
+	width: 320px;
+	height: 480px;
+	left: 50%;
+	top: 50%;
+	margin-left: -160px;
+	margin-top: -260px;
+	background: #222;
+	box-shadow: 0 0 3em #222;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+#statusbar {
+height:20px;
+background: #333;
+text-align:center;
+color: #DDD;
+font-size: 15px;
+line-height: 20px;
+font-weight: 400;
+}
+
+img.icon {
+margin:15px 0 0 15px;
+width:57px;
+height:57px;
+padding:0;
+border-radius:10px;
+}

@@ -72,6 +72,11 @@
 	100% { 	background: hsl(216, 70%, 39%); box-shadow: 0 0 3em hsl(216, 70%, 26%);  }
 }
 
+@-webkit-keyframes showAnimation {
+	0% { 	opacity:0;}
+	100% { 	opacity:1;  }
+}
+
 html, body, #labels { height: 100%; width: 100%;}
 a { color:white; text-decoration:none; }
 body {
@@ -79,10 +84,12 @@ body {
 	background: hsl(216, 70%, 26%) url(background.png);
 }
 
+
 /* Animations */
 body {
 	-webkit-animation: backgroundAnimation 	linear 12s infinite; 
 	animation: backgroundAnimation 	linear 12s infinite; 
+
 }
 #screen hr	{ 
 	-webkit-animation: clockAnimation 		linear 12s infinite; 
@@ -126,6 +133,8 @@ body {
 
 /* App Store */
 #appStore{
+/*	-webkit-transition: all .5s;
+	transition: all .5s; */
 	padding: 20px;
 	width: 200px;
 	height: 45px;
@@ -145,3 +154,33 @@ body {
 #appStore img{ float: left; padding-right:20px; height: 45px; }
 #appStore h1{font-size: 30px; font-weight: 400; line-height: 32px;}
 #appStore h2{font-size: 13px; font-weight: 400; line-height: 13px;}
+
+#home{
+	height:60px;
+	width:60px;
+	border-radius:30px;
+	background:#222;
+	position:fixed;
+	top:50%;
+	margin-left:-30px;
+	left:50%;
+	margin-top:240px;
+   -webkit-box-shadow: inset 0 0 20px #111;
+   box-shadow:         inset 0 0 20px #111;
+}
+
+#square{
+background:#CCC;
+margin:18px;
+height:20px;
+width:20px;
+border-radius:7px;
+padding:2px;
+}
+
+#innersquare{
+background:#222;
+height:20px;
+width:20px;
+border-radius:5px;
+}

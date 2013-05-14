@@ -1,13 +1,24 @@
----
-layout: default
-title: Your New Jekyll Site
----
-
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Slonce by Deathly Owl</title>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+</head>
+	<body>
+		<div id="screen">
+			<div id="statusbar"></div>
+			<div id="apps">
+				<a href="slonce/index.html"><img class="icon" src="Slonce.png"></a>
+				<img class="icon inactive" src="Radiator.png">
+				<img class="icon inactive" src="Antenna.png">
+				<img class="icon inactive" src="Lokale.png">
+				<a href="https://twitter.com/deathlyO"><img class="icon" src="twitter.png"></a>
+				<img class="icon" src="dowl.png">
+			</div>
+			<div id="dock">
+			</div>
+		</div>
+	</body>
+</html>

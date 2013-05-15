@@ -102,6 +102,7 @@ img.icon, #mailIcon {
 	width: 51px;
 	height: 51px;
 	padding: 3px;
+	background: #DDD;
 	background-image: -webkit-linear-gradient(45deg,
 		#C33 0px,	#C33 8px,
 		#DDD 8px,	#DDD 11px,

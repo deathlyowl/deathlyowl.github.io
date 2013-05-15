@@ -1,3 +1,4 @@
+/* INDEX */
 @font-face {
   font-family: 'Noto Sans';
   font-style: normal;
@@ -13,40 +14,102 @@
 
 * {margin:0; padding:0;}
 
-@-webkit-keyframes backgroundAnimation {
+@-webkit-keyframes springboardBackgroundAnimation {
 	0% { 	background-position: left top; }
 	100% { 	background-position: right bottom; }
 }
-@keyframes backgroundAnimation {
-	0% { 	background-position: left top; }
-	100% { 	background-position: right bottom; }
+@-webkit-keyframes slonceBackgroundAnimation {
+	0% { 	background-position: left top; background-color: #0D1921;}
+	15% { 	background-color: #0D1921;}
+	20% { 	background-color: #8CC3D4;}
+	80% { 	background-color: #8CC3D4;}
+	85% { 	background-color: #0D1921;}
+	100% { 	background-position: right bottom; background-color: #0D1921;}
 }
-
+@-webkit-keyframes slonceColorsAnimation {
+	0% { 	background: hsl(216, 70%, 39%); box-shadow: 0 0 3em hsl(216, 70%, 26%);}
+	5% { 	background: hsl(234, 70%, 39%); box-shadow: 0 0 3em hsl(234, 70%, 26%);  }
+	10% { 	background: hsl(252, 70%, 39%); box-shadow: 0 0 3em hsl(252, 70%, 26%);  }
+	15% { 	background: hsl(270, 70%, 39%); box-shadow: 0 0 3em hsl(270, 70%, 26%);  }
+	20% { 	background: hsl(288, 70%, 39%); box-shadow: 0 0 3em hsl(288, 70%, 26%);  }
+	25% { 	background: hsl(306, 70%, 39%); box-shadow: 0 0 3em hsl(306, 70%, 26%);  }
+	30% { 	background: hsl(324, 70%, 39%); box-shadow: 0 0 3em hsl(324, 70%, 26%);  }
+	35% { 	background: hsl(342, 70%, 39%); box-shadow: 0 0 3em hsl(342, 70%, 26%);  }
+	40% { 	background: hsl(360, 70%, 39%); box-shadow: 0 0 3em hsl(360, 70%, 26%);  }
+	45% { 	background: hsl(18, 70%, 39%); box-shadow: 0 0 3em hsl(18, 70%, 26%);  }
+	50% { 	background: hsl(36, 70%, 39%); box-shadow: 0 0 3em hsl(36, 70%, 26%); }
+	55% { 	background: hsl(54, 70%, 39%); box-shadow: 0 0 3em hsl(54, 70%, 26%);  }
+	60% { 	background: hsl(72, 70%, 39%); box-shadow: 0 0 3em hsl(72, 70%, 26%);  }
+	65% { 	background: hsl(90, 70%, 39%); box-shadow: 0 0 3em hsl(90, 70%, 26%);  }
+	70% { 	background: hsl(108, 70%, 39%); box-shadow: 0 0 3em hsl(108, 70%, 26%);  }
+	75% { 	background: hsl(126, 70%, 39%); box-shadow: 0 0 3em hsl(126, 70%, 26%);  }
+	80% { 	background: hsl(144, 70%, 39%); box-shadow: 0 0 3em hsl(144, 70%, 26%);  }
+	80% { 	background: hsl(162, 70%, 39%); box-shadow: 0 0 3em hsl(162, 70%, 26%);  }
+	90% { 	background: hsl(180, 70%, 39%); box-shadow: 0 0 3em hsl(180, 70%, 26%);  }
+	90% { 	background: hsl(198, 70%, 39%); box-shadow: 0 0 3em hsl(198, 70%, 26%);  }
+	100% { 	background: hsl(216, 70%, 39%); box-shadow: 0 0 3em hsl(216, 70%, 26%);  }
+}
 html, body, #labels { height: 100%; width: 100%;}
 a { color:white; text-decoration:none; }
 body {
 	font-family: "Noto Sans";
-	background: #f0f1e5 url(background.png);
+	background: #f0f1e5 url(/img/background.png);
 }
 
 .inactive{opacity: .5;}
 
 /* Animations */
-body {
-	-webkit-animation: backgroundAnimation 	linear 12s infinite; 
-	animation: backgroundAnimation 	linear 12s infinite; 
+body.springboard {
+	-webkit-animation: springboardBackgroundAnimation 	linear 12s infinite; 
+}
+body.slonce {
+	-webkit-animation: slonceBackgroundAnimation 	linear 12s infinite; 
+}
+#screen.slonce {-webkit-animation: slonceColorsAnimation		linear 60s infinite; }
+
+/* Springboard */
+#apps{ height:391px; }
+#dock {
+	background: #666;
+	border-bottom: 2px solid #999;
+	height: 67px;
+}
+#statusbar {
+	height:20px;
+	background: #333;
+	text-align:center;
+	color: #DDD;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+}
+img.icon {
+	margin:15px 0 0 15px;
+	width:57px;
+	height:57px;
+	padding:0;
+	border-radius:10px;
 }
 
-#apps{
-height:391px;}
 
-#dock {
-background: #666;
-border-bottom: 2px solid #999;
-height: 67px;}
+
+/* Slonce */
+#labels{ background: url(/img/slonceLabels.png); position:absolute; top:0; }
+#screen.slonce .night{height: 69px; opacity:.3;background: black;}
+#screen.slonce .twillight{height: 23px; opacity:.2;background: black;}
+#screen.slonce .day{height: 276px; opacity:0;}
+#screen.slonce hr{
+	color: hsl(216, 70%, 40%);
+	display: block;
+	position: relative;
+	height: 2px;
+	border: none;
+	background: white;
+	top: -460px;
+}
 
 /* Screen */
-#screen {
+#screen.springboard {
 	position:fixed;
 	width: 320px;
 	height: 480px;
@@ -59,21 +122,85 @@ height: 67px;}
 	border-radius: 4px;
 	overflow: hidden;
 }
-
-#statusbar {
-height:20px;
-background: #333;
-text-align:center;
-color: #DDD;
-font-size: 15px;
-line-height: 20px;
-font-weight: 400;
+#screen.slonce {
+	position:fixed;
+	width: 320px;
+	height: 460px;
+	left: 50%;
+	top: 50%;
+	margin-left: -160px;
+	margin-top: -240px;
+	background:hsl(216, 70%, 39%);
+	box-shadow: 0 0 3em hsl(216, 70%, 26%);
+	border-radius: 20px;
+	overflow: hidden;
 }
 
-img.icon {
-margin:15px 0 0 15px;
-width:57px;
-height:57px;
-padding:0;
-border-radius:10px;
+/* App Store */
+#appStore{
+	padding: 20px;
+	width: 200px;
+	height: 45px;
+	background: #222;
+	border-radius:10px; 
+	position:fixed;
+	top: 50%;
+	left:50%;
+	margin-top:-52px;
+	margin-left: -120px;
+	opacity: 0;
+}
+#screen:hover #appStore{ opacity: 1; }
+#appStore:hover{ box-shadow: 0 0 10px #000; }
+#appStore:active{ box-shadow: none; }
+#appStore img{ float: left; padding-right:20px; height: 45px; }
+#appStore h1{font-size: 30px; font-weight: 400; line-height: 32px;}
+#appStore h2{font-size: 13px; font-weight: 400; line-height: 13px;}
+
+/* Home button */
+#home{
+	height:60px;
+	width:60px;
+	border-radius:30px;
+	background:#222;
+	position:fixed;
+	top:50%;
+	margin-left:-30px;
+	left:50%;
+	margin-top:240px;
+   -webkit-box-shadow: inset 0 0 20px #111;
+   box-shadow:         inset 0 0 20px #111;
+}
+#home #square{
+background:#CCC;
+margin:18px;
+height:20px;
+width:20px;
+border-radius:7px;
+padding:2px;
+}
+#home #square #innersquare{
+background:#222;
+height:20px;
+width:20px;
+border-radius:5px;
+}
+
+/* Glyphish */
+#glyphish{
+	height:20px;
+	width:180px;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	opacity: .4;
+	background: url(/img/glyphish.png) top right no-repeat;
+	line-height: 20px;
+	color: #888;
+	font-size: 14px;
+}
+
+#glyphish:hover{
+-webkit-transition: all .5s;
+opacity:1;
 }

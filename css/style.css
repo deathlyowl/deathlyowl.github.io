@@ -49,6 +49,10 @@
 	90% { 	background: hsl(198, 70%, 39%); box-shadow: 0 0 3em hsl(198, 70%, 26%);  }
 	100% { 	background: hsl(216, 70%, 39%); box-shadow: 0 0 3em hsl(216, 70%, 26%);  }
 }
+@-webkit-keyframes slonceClockAnimation {
+	0% { 	top: -460px;}
+	100% { 	top: 0px;}
+}
 html, body, #labels { height: 100%; width: 100%;}
 a { color:white; text-decoration:none; }
 body {
@@ -66,6 +70,7 @@ body.slonce {
 	-webkit-animation: slonceBackgroundAnimation 	linear 12s infinite; 
 }
 #screen.slonce {-webkit-animation: slonceColorsAnimation		linear 60s infinite; }
+#screen.slonce hr	{ -webkit-animation: slonceClockAnimation 		linear 12s infinite; }
 
 /* Springboard */
 #apps{ height:391px; }

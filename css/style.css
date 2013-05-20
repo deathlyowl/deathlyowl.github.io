@@ -14,9 +14,21 @@
 
 * {margin:0; padding:0;}
 
+@keyframes springboardBackgroundAnimation {
+	0% { 	background-position: left top; }
+	100% { 	background-position: right bottom; }
+}
 @-webkit-keyframes springboardBackgroundAnimation {
 	0% { 	background-position: left top; }
 	100% { 	background-position: right bottom; }
+}
+@keyframes slonceBackgroundAnimation {
+	0% { 	background-position: left top; background-color: #0D1921;}
+	15% { 	background-color: #0D1921;}
+	20% { 	background-color: #8CC3D4;}
+	80% { 	background-color: #8CC3D4;}
+	85% { 	background-color: #0D1921;}
+	100% { 	background-position: right bottom; background-color: #0D1921;}
 }
 @-webkit-keyframes slonceBackgroundAnimation {
 	0% { 	background-position: left top; background-color: #0D1921;}
@@ -25,6 +37,29 @@
 	80% { 	background-color: #8CC3D4;}
 	85% { 	background-color: #0D1921;}
 	100% { 	background-position: right bottom; background-color: #0D1921;}
+}
+@keyframes slonceColorsAnimation {
+	0% { 	background: hsl(216, 70%, 39%); box-shadow: 0 0 3em hsl(216, 70%, 26%);}
+	5% { 	background: hsl(234, 70%, 39%); box-shadow: 0 0 3em hsl(234, 70%, 26%);  }
+	10% { 	background: hsl(252, 70%, 39%); box-shadow: 0 0 3em hsl(252, 70%, 26%);  }
+	15% { 	background: hsl(270, 70%, 39%); box-shadow: 0 0 3em hsl(270, 70%, 26%);  }
+	20% { 	background: hsl(288, 70%, 39%); box-shadow: 0 0 3em hsl(288, 70%, 26%);  }
+	25% { 	background: hsl(306, 70%, 39%); box-shadow: 0 0 3em hsl(306, 70%, 26%);  }
+	30% { 	background: hsl(324, 70%, 39%); box-shadow: 0 0 3em hsl(324, 70%, 26%);  }
+	35% { 	background: hsl(342, 70%, 39%); box-shadow: 0 0 3em hsl(342, 70%, 26%);  }
+	40% { 	background: hsl(360, 70%, 39%); box-shadow: 0 0 3em hsl(360, 70%, 26%);  }
+	45% { 	background: hsl(18, 70%, 39%); box-shadow: 0 0 3em hsl(18, 70%, 26%);  }
+	50% { 	background: hsl(36, 70%, 39%); box-shadow: 0 0 3em hsl(36, 70%, 26%); }
+	55% { 	background: hsl(54, 70%, 39%); box-shadow: 0 0 3em hsl(54, 70%, 26%);  }
+	60% { 	background: hsl(72, 70%, 39%); box-shadow: 0 0 3em hsl(72, 70%, 26%);  }
+	65% { 	background: hsl(90, 70%, 39%); box-shadow: 0 0 3em hsl(90, 70%, 26%);  }
+	70% { 	background: hsl(108, 70%, 39%); box-shadow: 0 0 3em hsl(108, 70%, 26%);  }
+	75% { 	background: hsl(126, 70%, 39%); box-shadow: 0 0 3em hsl(126, 70%, 26%);  }
+	80% { 	background: hsl(144, 70%, 39%); box-shadow: 0 0 3em hsl(144, 70%, 26%);  }
+	80% { 	background: hsl(162, 70%, 39%); box-shadow: 0 0 3em hsl(162, 70%, 26%);  }
+	90% { 	background: hsl(180, 70%, 39%); box-shadow: 0 0 3em hsl(180, 70%, 26%);  }
+	90% { 	background: hsl(198, 70%, 39%); box-shadow: 0 0 3em hsl(198, 70%, 26%);  }
+	100% { 	background: hsl(216, 70%, 39%); box-shadow: 0 0 3em hsl(216, 70%, 26%);  }
 }
 @-webkit-keyframes slonceColorsAnimation {
 	0% { 	background: hsl(216, 70%, 39%); box-shadow: 0 0 3em hsl(216, 70%, 26%);}
@@ -53,6 +88,10 @@
 	0% { 	top: -460px;}
 	100% { 	top: 0px;}
 }
+@keyframes slonceClockAnimation {
+	0% { 	top: -460px;}
+	100% { 	top: 0px;}
+}
 html, body, #labels { height: 100%; width: 100%;}
 a { color:white; text-decoration:none; }
 body {
@@ -65,12 +104,24 @@ body {
 /* Animations */
 body.springboard {
 	-webkit-animation: springboardBackgroundAnimation 	linear 12s infinite; 
+	animation: springboardBackgroundAnimation 	linear 12s infinite;
 }
 body.slonce {
 	-webkit-animation: slonceBackgroundAnimation 	linear 12s infinite; 
+	animation: slonceBackgroundAnimation 	linear 12s infinite; 
 }
-#screen.slonce {-webkit-animation: slonceColorsAnimation		linear 60s infinite; }
-#screen.slonce hr	{ -webkit-animation: slonceClockAnimation 		linear 12s infinite; }
+body.rota {
+	-webkit-animation: springboardBackgroundAnimation 	linear 12s infinite; 
+	background: #252525 url(/img/background.png);
+}
+#screen.slonce {
+	-webkit-animation: slonceColorsAnimation		linear 60s infinite; 
+	animation: slonceColorsAnimation		linear 60s infinite; 
+}
+#screen.slonce hr	{ 
+	-webkit-animation: slonceClockAnimation 		linear 12s infinite; 
+	animation: slonceClockAnimation 		linear 12s infinite; 
+}
 
 /* Springboard */
 #apps{ height:391px; }
@@ -122,6 +173,25 @@ img.icon, #mailIcon {
 		#DDD 64px,	#DDD 67px,
 		#C33 67px,	#C33 72px,
 		#DDD 72px,	#DDD 75px); 
+	background-image: linear-gradient(45deg,
+		#C33 0px,	#C33 8px,
+		#DDD 8px,	#DDD 11px,
+		#559 11px,	#559 16px,
+		#DDD 16px,	#DDD 19px,
+		#C33 19px,	#C33 24px,
+		#DDD 24px,	#DDD 27px,
+		#559 27px,	#559 32px,
+		#DDD 32px,	#DDD 35px,
+		#C33 35px,	#C33 40px,
+		#DDD 40px,	#DDD 43px,
+		#559 43px,	#559 48px,
+		#DDD 48px,	#DDD 51px,
+		#C33 51px,	#C33 56px,
+		#DDD 56px,	#DDD 59px,
+		#559 59px,	#559 64px,
+		#DDD 64px,	#DDD 67px,
+		#C33 67px,	#C33 72px,
+		#DDD 72px,	#DDD 75px); 
 	background-size:57px;
 }
 #mailIcon #mailInner{
@@ -137,6 +207,7 @@ img.icon, #mailIcon {
 	box-shadow: 0 0 5px #888;
 	border-radius:5px;
 	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
 	position:relative;
 }
 
@@ -186,6 +257,21 @@ img.icon, #mailIcon {
 	overflow: hidden;
 }
 
+#screen.rota {
+	position:fixed;
+	width: 320px;
+	height: 480px;
+	left: 50%;
+	top: 50%;
+	margin-left: -160px;
+	margin-top: -240px;
+	background:url(/img/rotaDefault.png);
+	box-shadow: 0 0 3em #333;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+
 /* App Store */
 #appStore{
 	padding: 20px;
@@ -220,6 +306,10 @@ img.icon, #mailIcon {
 	margin-top:240px;
    -webkit-box-shadow: inset 0 0 20px #111;
    box-shadow:         inset 0 0 20px #111;
+}
+
+#home.full{
+	margin-top:260px;
 }
 #home #square{
 background:#CCC;

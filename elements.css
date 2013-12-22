@@ -27,7 +27,12 @@
 	border-top: 47px solid black;
 }
 
+#header:hover{
+	-webkit-transform:rotate(-5deg);
+}
+
 #header:after{
+	-webkit-transform:rotate(5deg);
 	text-align:center;
 	display:block;
 	content:"blog zmartwionej sowy";
@@ -38,4 +43,5 @@
 	font-variant:small-caps;
 	font-weight: 900;
 	font-size: 1.5em;
+	line-height: 1.5em;
 }

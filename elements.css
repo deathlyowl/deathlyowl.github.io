@@ -3,14 +3,14 @@
 	border-top-right-radius: 15px;
 	width: 100%;
 	heeight: 124px;
-	background: black url(img/owlWhite.png);
+	background: #EEE url(img/owlBlack.png);
 	background-size:76px;
 	background-repeat:no-repeat;
 	background-position:top;
 	margin-top: 76px;
 	padding: 15px;
 	padding-top:124px;
-	border-top: 47px solid;
+	border-top: 47px solid #EEE;
 }
 
 #header{

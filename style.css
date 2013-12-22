@@ -22,7 +22,7 @@ article h4{
 	margin: 30px 0 20px 0;
 	text-align: left;
 }
-article h3 + p, article h4 + p{text-indent:0;}
+article h3 + p, article h4 + p, article p img + p {text-indent:0;}
 
 /* Lead */		article.post p:first-of-type { font-weight:800;}
 				article p:first-of-type { text-indent:0; }
@@ -35,3 +35,6 @@ img {
 	border-bottom: 1px solid #EEE;
 	padding: 2px 0;
 }
+
+article p a { border-bottom: 1px solid #CCC;}
+article p a:hover { border-bottom: 1px solid black;}

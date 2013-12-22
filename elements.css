@@ -8,16 +8,18 @@
 	background-repeat:no-repeat;
 	background-position:top;
 	margin-top: 76px;
-	padding: 15px;
 	padding-top:124px;
 	border-top: 47px solid #EEE;
-	display: none;
+}
+
+#disqus_thread{
+padding: 15px;
 }
 
 #header{
 	width: 124px;
 	height: 200px;
-	background: red url(img/owlBlack.png);
+	background: url(img/owlBlack.png);
 	background-size:124px;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -33,7 +35,6 @@
 }
 
 #header:after{
-background: green;
 	-webkit-transform:rotate(5deg);
 	text-align:center;
 	display:block;

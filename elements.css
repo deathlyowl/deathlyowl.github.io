@@ -11,12 +11,13 @@
 	padding: 15px;
 	padding-top:124px;
 	border-top: 47px solid #EEE;
+	display: none;
 }
 
 #header{
 	width: 124px;
 	height: 200px;
-	background: url(img/owlBlack.png);
+	background: red url(img/owlBlack.png);
 	background-size:124px;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -32,6 +33,7 @@
 }
 
 #header:after{
+background: blue;
 	-webkit-transform:rotate(5deg);
 	text-align:center;
 	display:block;
@@ -44,4 +46,8 @@
 	font-weight: 900;
 	font-size: 1.5em;
 	line-height: 1.5em;
+}
+
+@media screen and (max-width: 544px) {
+
 }

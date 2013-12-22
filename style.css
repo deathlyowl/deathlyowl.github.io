@@ -3,7 +3,7 @@
 @import url(/elements.css);
 * {margin:0; padding:0; font-family: 'Lato', sans-serif; -webkit-transition: .5s ease-in-out;}
 a {text-decoration:none; color:black;}
-body { margin: 324px auto 0 auto; width: 524px; background: #FDFDFD url(/img/gridmee.png);}
+body { margin: 324px auto 0 auto; width: 524px; background: #FDFDFD;}
 
 /* Title and date */
 article h1, article h2 { margin-left: -124px; }
@@ -22,6 +22,17 @@ article h4{
 	margin: 30px 0 20px 0;
 	text-align: left;
 }
+
+
+@media screen and (max-width: 772px) {
+	article h1, article h2, article h3{margin-left: 0;}
+}
+
+@media screen and (max-width: 544px) {
+	body { width: 100%;}
+	article p, article h1, article h2, article h3 {padding: 0 10px;}
+}
+
 article h3 + p, article h4 + p, article p img + p {text-indent:0;}
 
 /* Lead */		article.post p:first-of-type { font-weight:800;}

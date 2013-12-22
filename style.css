@@ -28,9 +28,9 @@ article h4{
 	article h1, article h2, article h3{margin-left: 0;}
 }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 564px) {
 	body { width: 100%;}
-	article p, article h1, article h2, article h3 {padding: 0 10px;}
+	article p, article h1, article h2, article h3 {padding: 0 20px;}
 }
 
 article h3 + p, article h4 + p, article p img + p {text-indent:0;}

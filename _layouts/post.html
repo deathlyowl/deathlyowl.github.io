@@ -3,6 +3,6 @@ layout:	default
 ---	
 <article>
 	<h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
-	<h2>{{page.date}}</h2>
+	<h2>{{page.date | date: "%m/%d/%Y" }}</h2>
 	{{content}}
 </article>

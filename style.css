@@ -17,9 +17,21 @@ article h3{
 	padding: 20px;
 	font-size:1.3em;
 }
-article h3 + p{text-indent:0;}
+article h4{
+	font-size: 1.1em;
+	margin: 30px 0 20px 0;
+	text-align: left;
+}
+article h3 + p, article h4 + p{text-indent:0;}
 
 /* Lead */		article.post p:first-of-type { font-weight:800;}
 				article p:first-of-type { text-indent:0; }
 
 /* Tekst */		article p { font-size: 1.2em; text-indent: 47px; line-height:1.5em; }
+/* Ilustracje */
+img {
+	width: 100%;
+	border-top: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+	padding: 2px 0;
+}

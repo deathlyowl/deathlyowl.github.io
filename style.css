@@ -9,13 +9,6 @@ body { margin: 324px auto 0 auto; width: 524px; background: #FDFDFD;}
 article h1, article h2 { margin-left: -124px; }
 article h1 { font-weight: 400; font-size: 2em; }
 article h2 { font-weight: 300; font-size: 1.1em; line-height: 2em; }
-article h1 a {
-	border-top-left-radius:15px;
-	border-bottom-right-radius:15px;
-	padding: 5px 10px;
-	background: black; 
-	color: white;
-}
 
 /* Śródtytuł */
 article h3{
@@ -26,5 +19,7 @@ article h3{
 }
 article h3 + p{text-indent:0;}
 
-/* Lead */		article p:first-of-type { font-weight:800; text-indent:0; }
+/* Lead */		article.post p:first-of-type { font-weight:800;}
+				article p:first-of-type { text-indent:0; }
+
 /* Tekst */		article p { font-size: 1.2em; text-indent: 47px; line-height:1.5em; }

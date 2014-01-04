@@ -224,6 +224,7 @@ body {
 
 #subtext{
 	font-family: 'Tahoma';
+	font-family: 'Futura';
 	font-size:12px;
 	padding:10px;
 	height: 204px;
@@ -239,9 +240,22 @@ body {
 	text-align:left;
 }
 
-
-
-
-
+#subtextLeft{
+	font-family: 'Tahoma';
+	font-family: 'Futura';
+	font-size:12px;
+	padding:10px;
+	height: 204px;
+	position:fixed;
+	left: 50%;
+	margin-left:-380px;
+	margin-top:60px;
+	top: 50%;
+	overflow:hidden;
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+	width:200px;
+	text-align:right;
+}
 
 

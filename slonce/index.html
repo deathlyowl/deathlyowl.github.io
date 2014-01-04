@@ -8,44 +8,6 @@
     <script src="functions.js"></script>
     <script src="sunclock.js"></script>
     <script>
-	
-	var pagesCount = 7;
-	var direction = 0;
-	var appColors = new Array( "#F4515D", "#FCA23C", "#FFCF41", "#0097FD" );
-
-	var colors = new Array( "#FF3B30", "#FFCC00", "#4CD964", "#34AADC",
-							"#007AFF", "#5856D6", "#FF2D55", "#E0F8D8",
-							"#D1EEFC", "#C7C7CC", "#8E8E93", "#FF4981",
-							"#FF3A2D", "#BDBEC2", "#1F1F21", "#FF1300",
-							"#F7F7F7", "#FFD3E0" );
-
-	var parameters = [
-	// [00] bars
-	// [01] lines
-	// [02] labels
-	// [03] hand
-	// [04] background
-	// [05] screen
-	// [06] logo
-	// [07] left
-	// [08] right
-	// [09] textcolor
-	
-	  [0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0],
-	  [0, 0, 0, 0, colors[16], appColors[0], 1, "Słońce", "the app", appColors[0], 0],
-	  [0, 0, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the clock", colors[16], 0],
-	  [2, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0],
-	  //[2, 0, 0, 0, appColors[3], appColors[3], 0, "", "", colors[16], 0],
-	  [1, 0, 0, 0, appColors[3], appColors[3], 0, "civil", "twillight", colors[16], 1, "url('civil.png')"],
-	  [2, 0, 0, 0, appColors[3], appColors[3], 0, "navigational", "twillight", colors[16],1, "url('navis.png')"],
-	  [3, 0, 0, 0, appColors[3], appColors[3], 0, "astronomical", "twillight", colors[16],1, "url('astro.png')"],
-
-	  
-	  [0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0]
-	];
-	var page = 0;
-	var pageHeight = 700;
-	
 	var setPage = function(page) {
 		// Page configuration
 		setBars(calculations, parameters[page][0]);
@@ -59,12 +21,13 @@
 		
 		$('#logo').css("opacity", parameters[page][6]);
 		
-		$('#left').text(parameters[page][7]);
+		$('#left').html(parameters[page][7]);
 		$('#right').html(parameters[page][8]);
 		
 		$('#left').css("color", parameters[page][9]);
 		$('#right').css("color", parameters[page][9]);
 		$('#subtext').css("color", parameters[page][9]);
+		$('#subtextLeft').css("color", parameters[page][9]);
 		
 		$('#indicator').css("opacity", parameters[page][10]);
 		$('#indicator').css("background-image", parameters[page][11]);
@@ -95,6 +58,10 @@
 			$( "#appStore" ).css("display", "none");
 			$( "#appStore" ).css("opacity", 0);
 		}
+		
+
+		$('#subtextLeft').html(parameters[page][12]);
+		$('#subtext').html(parameters[page][13]);
 	}
 	
 	window.onload = function() {
@@ -115,18 +82,14 @@
 		$( '#backButton' ).click(function() {
 		  setPage(--page);
 		});
-		
-		
-	
 	}
     </script>
 </head>
 <body>
 	<div id='button'></div>
 	<div id='backButton'></div>
-	
-
 	<a href="/" id="owl"></a>
+	
 	<!-- Feedback -->
 	<h1 id="feedback"></h1>
 
@@ -155,7 +118,9 @@
 	</div>
 	
 	<div id='subtext'></div>
-
+	<div id='subtextLeft'></div>
+	
+	<!-- Ala ma kota a kot ma tęgi wpierdol, bo Ala ma nerwicę i musi gdzieś odprowadzać stres. Biedny kot Ali. -->
 	<!-- Logo -->
 	<div id='logo'></div>
 
@@ -177,7 +142,6 @@
 	</ul>
 	
 	<!-- Pages -->
-	<section class='page'></section>
 	<a href="https://itunes.apple.com/us/app/slonce/id647719424" id="appStore"></a>
 </body>
 </html>

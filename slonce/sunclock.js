@@ -42,8 +42,8 @@ var epochFromJulian = function(julian) {
 }
 
 var calculate = function() {
-	longitude = 17;
-	latitude = 51;
+	longitude = 17.123;
+	latitude = 16.5159;
 	julianCycle = 5116;
 
 	noon = approx(longitude, julianCycle);

@@ -23,6 +23,9 @@ var parameters = [
 // [11] indicator image
 // [12] left subtext
 // [13] left subtext
+//[2, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "", "", "We know what we are doing.<br> We are polish engineers. <br>We are using GPS."],
+
+
   	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in polish.<br>We are polish.", ""],
   	[0, 0, 0, 0, colors[16], appColors[0], 1, "Słońce", "the app", appColors[0], 0, "", "", ""],
   	[0, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the clock", colors[16], 0, "", "", "This white line is the <strong>hand</strong> of it."],

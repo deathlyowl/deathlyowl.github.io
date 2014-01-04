@@ -185,6 +185,24 @@ body {
 	opacity:0;
 }
 
+#gps {
+	
+	width: 20px;
+	height: 20px;
+    -webkit-mask-image: url('gps.png');
+	
+	position:fixed;
+	left: 50%;
+	top: 50%;
+	margin-left:130px;
+	margin-top:-274px;
+	
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+	
+	opacity:1;
+}
+
 #backButton {
 	opacity: .5;
 	height: 20px;

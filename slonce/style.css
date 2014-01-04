@@ -1,0 +1,247 @@
+*{margin:0; padding:0;}
+
+body {
+
+	font-family: "Futura-CondensedMedium";
+	color: white;
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+}
+
+#feedback{
+	position:fixed;
+	text-align:center;
+	width: 100%;
+}
+
+/* Screen */
+.screen, .screen *{width:320px;}
+.screen{
+	height: 568px;
+	position:fixed;
+	right: 50%;
+	margin-right:-160px;
+	margin-top:-284px;
+	border-radius:20px;
+	top: 50%;
+	overflow:hidden;
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+}
+
+#handScreen{
+	overflow:visible;
+}
+#pretwillight, #posttwillight, #prenight, #postnight, #nightspace, #twillightspace {
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+}
+#pretwillight, #posttwillight, #prenight, #postnight {
+	opacity: .1;
+	background: black;
+}
+
+#pretwillight 	{ height: 0px;}
+#twillightspace	{ height: 568px;}
+#posttwillight 	{ height: 568px;}
+
+#prenight 		{ height: 0px;}
+#nightspace		{ height: 568px;}
+#postnight 		{ height: 568px;}
+
+.screen #hand {
+	height:2px;
+    background: rgba(256, 256, 256, .5);
+
+	position:relative;
+	top: 180px;
+}
+
+.screen #hand #ticker {
+	background: white;
+	height: 2px;
+	width: 0px;
+}
+
+#lines 	{ 
+	background: url('lines.png');
+	opacity:0;
+}
+#labels { 
+	background: url('labels.png');
+	opacity:0;
+}
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(45deg); } }
+@-moz-keyframes spin { 100% { -webkit-transform: rotate(45deg); } }
+
+/* Logo */
+#logo {
+	background: url('logo.png');
+	width:160px;
+	height:160px;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left:-80px;
+	margin-top:-80px;
+    -webkit-animation:spin 1s ease-in-out infinite;
+	-webkit-transition: .75s ease-in-out;
+    -moz-animation:spin 1s ease-in-out infinite;
+	-moz-transition: .75s ease-in-out;
+	opacity:0;
+}
+
+
+#indicator {
+	background-color: rgba(0,0,0,.5);
+	border-radius:40px;
+	width:80px;
+	height:80px;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left:-40px;
+	margin-top:-40px;
+	opacity:0;
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+}
+
+.page {
+	height:200px;
+}
+
+#menu {
+	opacity:0;
+	height: 20px;
+	width: 144px;
+	position:fixed;
+	right: 50%;
+	top: 50%;
+	margin-top:284px;
+	margin-right:-72px;
+	overflow:hidden;
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+	text-align:center;
+}
+#menu li {
+	background: white;
+	border-radius:5px;
+	width:6px;
+	height:6px;
+	display:block;
+	float:left;
+	margin:5px;
+	opacity: .2;
+}
+
+#button {
+	opacity: .5;
+	height: 20px;
+	width: 40px;
+	position:fixed;
+	right: 50%;
+	top: 50%;
+	margin-top:304px;
+	margin-right:-20px;
+	-webkit-transition: .75s ease-in;
+    -webkit-mask-image: url('arrow.png');
+}
+
+#owl {
+	opacity: 1;
+	height: 80px;
+	width: 80px;
+
+	position:fixed;
+	right: 40px;
+	bottom: 40px;
+	
+	-webkit-transition: .75s ease-in;
+    -webkit-mask-image: url('owl.png');
+}
+
+
+#appStore {
+	background: black;
+	
+	width: 240px;
+	height: 85px;
+	
+	background-image:url('appStore.png');
+	
+	position:fixed;
+	left: 50%;
+	top: 50%;
+	margin-left:160px;
+	margin-top:-32px;
+	
+	border-radius: 10px;
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+	
+	opacity:0;
+}
+
+#backButton {
+	opacity: .5;
+	height: 20px;
+	width: 40px;
+	position:fixed;
+	right: 50%;
+	top: 50%;
+	margin-top:-324px;
+	margin-right:-20px;
+	-webkit-transition: .75s ease-in;
+    -webkit-mask-image: url('backArrow.png');
+	-moz-transition: .75s ease-in;
+    -moz-mask-image: url('backArrow.png');
+}
+
+
+/* Labels */
+#left, #right{
+	height: 548px;
+	width:300px;
+	padding:10px;
+}
+
+#left{
+	margin-right:160px;
+	text-align:right;
+	line-height:568px;
+	font-size: 4em;
+}
+
+#right{
+	margin-right:-480px;
+	line-height:568px;
+	text-align:left;
+	font-size: 4em;
+}
+
+
+#subtext{
+	font-family: 'Tahoma';
+	font-size:12px;
+	padding:10px;
+	height: 204px;
+	position:fixed;
+	right: 50%;
+	margin-right:-380px;
+	margin-top:60px;
+	top: 50%;
+	overflow:hidden;
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+	width:200px;
+	text-align:left;
+}
+
+
+
+
+
+
+

@@ -207,20 +207,30 @@ body {
 color:black;
 	font-family: "Futura";
 	font-size: .75em;
-	width: 320px;
+	width: 160px;
 	height: 20px;
 	line-height:20px;
 	
 	position:fixed;
 	left: 50%;
 	top: 50%;
-	margin-left:170px;
+	margin-left:160px;
 	margin-top:-274px;
 	
 	-webkit-transition: .75s ease-in;
 	-moz-transition: .75s ease-in;
-	
+
+	-webkit-transform-origin: 0px 00px;
+    -webkit-transform: translateY(-100%) rotate(-45deg); /* Safari */
 	opacity:0;
+}
+
+#city:after{
+	display:block;
+	content:"\Ause left/right key on your keyboard to change city";
+	opacity: .5;
+	
+	
 }
 
 #backButton {

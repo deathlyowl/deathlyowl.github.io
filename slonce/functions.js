@@ -21,7 +21,7 @@ var cities = [
 	["South pole", 0, -90],
 ];
 
-var cityCount = 11;
+var cityCount = 10;
 var cityn = 4;
 
 var parameters = [

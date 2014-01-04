@@ -9,11 +9,22 @@
     <script src="sunclock.js"></script>
     <script>
 
-	var calculations = calculate();
+	var calculations = calculate(cityn);
 	var setPage = function(page) {
 		// Page configuration
 		setBars(calculations, parameters[page][0]);
 		
+		$( "#city" ).text(cities[cityn][0]);
+		
+		if(parameters[page][0])
+		{
+			$( "#city" ).css("opacity", .2);
+		}
+		else
+		{
+
+			$( "#city" ).css("opacity", 0);
+		}
 		$('#lines').css("opacity", parameters[page][1]);
 		$('#labels').css("opacity", parameters[page][2]);
 		$('#hand').css("opacity", parameters[page][3]);
@@ -94,6 +105,9 @@
 	window.onload = function() {
 		setPagesize();
 		moveHand();
+		
+		$( "#city" ).text(cities[cityn][0]);
+
 	
 		setInterval(moveHand, 1000);
 		setTimeout(enableAnimations, 1000);
@@ -170,5 +184,6 @@
 	<!-- Pages -->
 	<a href="https://itunes.apple.com/us/app/slonce/id647719424" id="appStore"></a>
 	<div id='gps'></div>
+	<div id='city'>Wrocław</div>
 </body>
 </html>

@@ -41,10 +41,11 @@ var epochFromJulian = function(julian) {
     return epoch = 86400 * (julian - + 2440587.5);
 }
 
-var calculate = function() {
-	longitude = 17.123;
-	latitude = 16.5159;
-	julianCycle = 5116;
+var calculate = function(cityID) {
+	city = cities[cityID];
+	longitude = 17.02;//city[1];
+	latitude = city[2];
+	julianCycle = 5117;
 
 	noon = approx(longitude, julianCycle);
 	anomaly = solarMeanAnomaly(noon);	
@@ -84,6 +85,10 @@ var calculate = function() {
     if (civilAngle != civilAngle)           stage = 1;
     if (firstTouchAngle != firstTouchAngle) stage = 0;
 	
+	if (stage == 0 && latitude < 0) stage = -1;
+	
+	//alert(stage);
+	
     lastTouchTime = approx(longitude - firstTouchAngle , julianCycle);
 	lastAstroTime = approx(longitude - astroAngle, julianCycle);
 	lastNaviTime = approx(longitude - naviAngle, julianCycle);
@@ -122,6 +127,8 @@ var calculate = function() {
 	
 	calculations[6] = astroDusk;
 	calculations[7] = astroDawn;
+	
+	calculations[8] = stage;
 	
 	return calculations;
 	

@@ -203,6 +203,26 @@ body {
 	opacity:1;
 }
 
+#city {
+color:black;
+	font-family: "Futura";
+	font-size: .75em;
+	width: 320px;
+	height: 20px;
+	line-height:20px;
+	
+	position:fixed;
+	left: 50%;
+	top: 50%;
+	margin-left:170px;
+	margin-top:-274px;
+	
+	-webkit-transition: .75s ease-in;
+	-moz-transition: .75s ease-in;
+	
+	opacity:0;
+}
+
 #backButton {
 	opacity: .5;
 	height: 20px;

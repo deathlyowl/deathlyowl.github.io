@@ -7,6 +7,22 @@ var colors = new Array( "#FF3B30", "#FFCC00", "#4CD964", "#34AADC",
 						"#D1EEFC", "#C7C7CC", "#8E8E93", "#FF4981",
 						"#FF3A2D", "#BDBEC2", "#1F1F21", "#FF1300",
 						"#F7F7F7", "#FFD3E0" );
+var cities = [
+	["Tromsø", 18.933333, 69.666667 ],
+	["Mo i Rana", 14.133333, 66.316667 ],
+	["Якутск", 129.733333, 62.033333],	
+	["Świnoujście", 14.2475, 53.907778],
+	["Wrocław", 17.02, 51.11],
+	["İstanbul", 29, 41],
+	["Jerusalem", 35.216667, 31.783333],
+	["Ouagadougou", -1.516667, 12.366667],
+	["Montevideo",  -56.166667, -34.883333],
+	["Punta Arenas", -70.933611	, -53.166944],	
+	["South pole", 0, -90],
+];
+
+var cityCount = 11;
+var cityn = 4;
 
 var parameters = [
 // [00] bars
@@ -24,13 +40,13 @@ var parameters = [
 // [12] left subtext
 // [13] left subtext
 //[2, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "", "", "We know what we are doing.<br> We are polish engineers. <br>We are using GPS."],
-//[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in polish.<br>We are polish.", ""],
-
+//[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in polish.<br>We are polish.", ""],	
+	
   	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in <em>polish</em>.<br>We are <em>polish</em>.", ""],
   	[0, 0, 0, 0, colors[16], appColors[0], 1, "Słońce", "the app", appColors[0], 0, "", "", ""],
   	[0, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the clock", colors[16], 0, "", "", "This white line is the <strong>hand</strong> of it."],
-	[2, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "", "", "We are using GPS.<br>We know what we are doing.<br> We are polish engineers."],
-	[2, 0, 0, 0, appColors[3], appColors[3], 0, "<span style=\"color: rgba(1,1,1,.2);\">night</span>", "<span style=\"color: rgba(1,1,1,.1);\">twillight*</span>", colors[16], 0, "", "you know, when it's dark and stars are above your head", "it's when there is some light but sun is still on <strong>invisible</strong> side of horizon. <br><span style=\"color: rgba(1,1,1,.2);\">*<em>not the motion picture</em></span>"],
+	[1, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "", "", "We are using GPS.<br>We know what we are doing.<br> We are polish engineers."],
+	[1, 0, 0, 0, appColors[3], appColors[3], 0, "<span style=\"color: rgba(1,1,1,.2);\">night</span>", "<span style=\"color: rgba(1,1,1,.1);\">twillight*</span>", colors[16], 0, "", "you know, when it's dark and stars are above your head", "it's when there is some light but sun is still on <strong>invisible</strong> side of horizon. <br><span style=\"color: rgba(1,1,1,.2);\">*<em>not the motion picture</em></span>"],
 	[1, 0, 0, 0, appColors[3], appColors[3], 0, "civil", "twillight", colors[16], 1, "url('civil.png')", "", "When the sun is 6 degrees below the horizon."],
   	[2, 0, 0, 0, appColors[3], appColors[3], 0, "nautical", "twillight", colors[16],1, "url('navis.png')", "", "When there is enough sunlight for the horizon to be distinguishable."],
   	[3, 0, 0, 0, appColors[3], appColors[3], 0, "astronomical", "twillight", colors[16],1, "url('astro.png')", "", "When you cannot observe stars."],
@@ -119,6 +135,29 @@ var setBars = function(calculations, mode) {
 
 	$('#twillightspace').css("height", twillightSpace);
 	$('#nightspace').css("height", nightSpace);
+	
+	// Dnie i noce polarne
+	if(mode != 0){
+		if(calculations[8] == -1){
+			$('#pretwillight').css("height", 0);
+			$('#prenight').css("height", 0);
+
+			$('#twillightspace').css("height", 568);
+			$('#nightspace').css("height", 568);
+		}else if(calculations[8] == 0){
+			$('#pretwillight').css("height", 284);
+			$('#prenight').css("height", 284);
+
+			$('#twillightspace').css("height", 0);
+			$('#nightspace').css("height", 0);
+		}else if(calculations[8] == 3){
+			if(mode == 3)
+			{
+				$('#prenight').css("height", 0);
+				$('#nightspace').css("height", 568);
+			}
+		}
+	}
 }
 
 $(document.documentElement).keyup(function (event) {
@@ -126,7 +165,8 @@ $(document.documentElement).keyup(function (event) {
   if (event.keyCode == 38) {
 	  page--;
     // go left
-  } else if (event.keyCode == 40) {
+  }
+   else if (event.keyCode == 40) {
     // go right
 	page++;
   }
@@ -135,7 +175,27 @@ $(document.documentElement).keyup(function (event) {
 if(page < 0) page = 0;
 if(page > pagesCount) page = pagesCount;
 
+
+if(page >= 3 && page <= 7)
+{
+  if (event.keyCode == 37) {
+	  --cityn;
+	  if(cityn < 0) cityn = 0;
+  	var calculations = calculate(cityn);
+  }
+  else if (event.keyCode == 39) {
+	  ++cityn;
+	  if(cityn > cityCount) cityn = cityCount;
+	var calculations = calculate(cityn);
+  }
+}
+
 setPage(page);
+
+
+
+
+
 });
 
 $( window ).scroll(function() {

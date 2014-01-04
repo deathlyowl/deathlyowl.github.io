@@ -250,7 +250,7 @@ body {
 	position:fixed;
 	right: 50%;
 	margin-right:-380px;
-	margin-top:60px;
+	margin-top:50px;
 	top: 50%;
 	overflow:hidden;
 	-webkit-transition: .75s ease-in;
@@ -268,7 +268,7 @@ body {
 	position:fixed;
 	left: 50%;
 	margin-left:-380px;
-	margin-top:60px;
+	margin-top:50px;
 	top: 50%;
 	overflow:hidden;
 	-webkit-transition: .75s ease-in;

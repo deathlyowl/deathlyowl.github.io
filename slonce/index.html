@@ -8,6 +8,8 @@
     <script src="functions.js"></script>
     <script src="sunclock.js"></script>
     <script>
+
+	var calculations = calculate();
 	var setPage = function(page) {
 		// Page configuration
 		setBars(calculations, parameters[page][0]);
@@ -48,6 +50,30 @@
 			$( "#backButton" ).css("opacity", 1);
 		}
 		
+		
+		if(page == 4)
+		{
+			sunset = new Date(epochFromJulian(calculations[0]) * 1000);
+			dawn =  new Date(epochFromJulian(calculations[2]) * 1000);
+	
+			sunsetHeight = heightWithMinutes(	sunset.getMinutes() + 
+												sunset.getHours() * 60) - 20;
+
+			dawnHeight = heightWithMinutes(	dawn.getMinutes() + 
+											dawn.getHours() * 60) - 27;
+			
+			$( "#left" ).css("line-height", dawnHeight + "px");
+			$( "#right" ).css("line-height", 2*sunsetHeight + "px");
+			$( "#subtext" ).css("margin-top", (-284 + sunsetHeight + 40) + "px");
+			$( "#subtextLeft" ).css("margin-top", (-284 + dawnHeight/2 + 40) + "px");
+		}
+		else {
+			$( "#left" ).css("line-height", "568px");
+			$( "#right" ).css("line-height", "568px");
+			$( "#subtext" ).css("margin-top", "50px");
+			$( "#subtextLeft" ).css("margin-top", "50px");
+		}
+		
 		if(page == pagesCount)
 		{
 			$( "#button" ).css("opacity", 0);
@@ -67,7 +93,6 @@
 	
 	window.onload = function() {
 		setPagesize();
-		calculations = calculate();
 		moveHand();
 	
 		setInterval(moveHand, 1000);

@@ -24,9 +24,9 @@ var parameters = [
 // [12] left subtext
 // [13] left subtext
 //[2, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "", "", "We know what we are doing.<br> We are polish engineers. <br>We are using GPS."],
+//[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in polish.<br>We are polish.", ""],
 
-
-  	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in polish.<br>We are polish.", ""],
+  	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in <em>polish</em>.<br>We are <em>polish</em>.", ""],
   	[0, 0, 0, 0, colors[16], appColors[0], 1, "Słońce", "the app", appColors[0], 0, "", "", ""],
   	[0, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the clock", colors[16], 0, "", "", "This white line is the <strong>hand</strong> of it."],
 	[2, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "", "", "We know what we are doing.<br> We are polish engineers. <br>We are using GPS."],
@@ -34,7 +34,7 @@ var parameters = [
 	[1, 0, 0, 0, appColors[3], appColors[3], 0, "civil", "twillight", colors[16], 1, "url('civil.png')", "", "When the sun is 6 degrees below the horizon."],
   	[2, 0, 0, 0, appColors[3], appColors[3], 0, "nautical", "twillight", colors[16],1, "url('navis.png')", "", "When there is enough sunlight for the horizon to be distinguishable."],
   	[3, 0, 0, 0, appColors[3], appColors[3], 0, "astronomical", "twillight", colors[16],1, "url('astro.png')", "", "When you cannot observe stars."],
-	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It's colorful.<br> It's moving.<br>It's cheap.", "only <em>$0.99</em>"]
+	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It's <strong>colorful</strong>.<br> It's <strong>moving</strong>.<br>It's <strong>cheap</strong>.", "only <em>$0.99</em>"]
 ];
 
 var page = 0;

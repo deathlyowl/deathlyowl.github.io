@@ -50,7 +50,7 @@ var parameters = [
 	[1, 0, 0, 0, appColors[3], appColors[3], 0, "civil", "twillight", colors[16], 1, "url('civil.png')", "", "When the sun is 6 degrees below the horizon."],
   	[2, 0, 0, 0, appColors[3], appColors[3], 0, "nautical", "twillight", colors[16],1, "url('navis.png')", "", "When there is enough sunlight for the horizon to be distinguishable."],
   	[3, 0, 0, 0, appColors[3], appColors[3], 0, "astronomical", "twillight", colors[16],1, "url('astro.png')", "", "When you cannot observe stars."],
-	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It's <strong>colorful</strong>.<br> It's <strong>moving</strong>.", "only <em>$0.99</em>"]
+	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It's <strong>colorful</strong>.<br> It's <strong>moving</strong>.", "Add the light to your time for <em>$0.99</em>"]
 ];
 
 var page = 0;

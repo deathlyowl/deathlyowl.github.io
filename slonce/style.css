@@ -1,9 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,700,800,600,300&subset=latin,latin-ext);
+
+
 *{margin:0; padding:0;}
 a { color:inherit; }
 
 body {
-
-	font-family: "Futura-CondensedMedium";
+	font-family: "Futura-CondensedMedium", "Open Sans Condensed", sans-serif;
 	color: white;
 	-webkit-transition: .75s ease-in;
 	-moz-transition: .75s ease-in;
@@ -73,7 +77,11 @@ body {
 	opacity:0;
 }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(45deg); } }
-@-moz-keyframes spin { 100% { -webkit-transform: rotate(45deg); } }
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(45deg); }
+}
 
 /* Logo */
 #logo {
@@ -87,8 +95,10 @@ body {
 	margin-top:-80px;
     -webkit-animation:spin 1s ease-in-out infinite;
 	-webkit-transition: .75s ease-in-out;
-    -moz-animation:spin 1s ease-in-out infinite;
-	-moz-transition: .75s ease-in-out;
+	
+	-moz-animation: spin 1s ease-in-out infinite;
+		
+	/*-moz-transition: .75s ease-in-out;*/
 	opacity:0;
 }
 
@@ -161,6 +171,8 @@ body {
 	
 	-webkit-transition: .75s ease-in;
     -webkit-mask-image: url('owl.png');
+	
+	
 }
 
 
@@ -204,8 +216,8 @@ body {
 }
 
 #city {
-color:white;
-	font-family: "Futura";
+	color:white;
+	font-family: "Futura", "Open Sans";
 	font-size: .75em;
 	width: 120px;
 	height: 20px;
@@ -220,8 +232,13 @@ color:white;
 	-webkit-transition: .75s ease-in;
 	-moz-transition: .75s ease-in;
 
-	-webkit-transform-origin: 0px 00px;
+	-webkit-transform-origin: 0px 0px;
     -webkit-transform: translateY(-100%) rotate(-45deg); /* Safari */
+	
+
+	-moz-transform-origin: 0px 00px;
+    -moz-transform: translateY(-100%) rotate(-45deg); /* Safari */
+	
 	opacity:0;
 }
 
@@ -271,8 +288,7 @@ color:white;
 
 
 #subtext{
-	font-family: 'Tahoma';
-	font-family: 'Futura';
+	font-family: 'Futura', 'Open Sans';
 	font-size:12px;
 	padding:10px;
 	height: 204px;
@@ -289,8 +305,7 @@ color:white;
 }
 
 #subtextLeft{
-	font-family: 'Tahoma';
-	font-family: 'Futura';
+	font-family: 'Futura', 'Open Sans';
 	font-size:12px;
 	padding:10px;
 	height: 204px;

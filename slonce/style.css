@@ -228,9 +228,8 @@ color:white;
 #city:after{
 	display:block;
 	content:"\Ause left/right key on your keyboard to change place";
+	content:"Poland";
 	opacity: .5;
-	
-	
 }
 
 #backButton {

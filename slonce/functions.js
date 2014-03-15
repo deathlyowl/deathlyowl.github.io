@@ -159,38 +159,38 @@ var setBars = function(calculations, mode) {
 		}
 	}
 }
-
-$(document.documentElement).keyup(function (event) {
-  // handle cursor keys
-  if (event.keyCode == 38) {
-	  page--;
-    // go left
-  }
-   else if (event.keyCode == 40) {
-    // go right
-	page++;
-  }
-  
-
-if(page < 0) page = 0;
-if(page > pagesCount) page = pagesCount;
-
-
-if(page >= 3 && page <= 7)
+$(document.documentElement).keyup(function (event) 
 {
-  if (event.keyCode == 37) {
-	  --cityn;
-	  if(cityn < 0) cityn = 0;
-  	var calculations = calculate(cityn);
-  }
-  else if (event.keyCode == 39) {
-	  ++cityn;
-	  if(cityn > cityCount) cityn = cityCount;
-	var calculations = calculate(cityn);
-  }
-}
+	// handle cursor keys
+	if (event.keyCode == 38) {
+	  page--;
+	// go left
+	}
+	else if (event.keyCode == 40) {
+	// go right
+	page++;
+	}
 
-setPage(page);
+	if(page < 0) page = 0;
+	if(page > pagesCount) page = pagesCount;
+
+	/*
+	if(page >= 3 && page <= 7)
+	{
+	  if (event.keyCode == 37) {
+		  --cityn;
+		  if(cityn < 0) cityn = 0;
+	  	var calculations = calculate(cityn);
+	  }
+	  else if (event.keyCode == 39) {
+		  ++cityn;
+		  if(cityn > cityCount) cityn = cityCount;
+		var calculations = calculate(cityn);
+	  }
+	}
+	*/
+
+	setPage(page);
 
 
 

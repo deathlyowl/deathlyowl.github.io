@@ -101,29 +101,23 @@ var setPagesize = function() {
 }
 
 var setBars = function(calculations, mode) {
-	
 	dawnIndex = mode;
+		
 	
-	sunset = new Date(epochFromJulian(calculations[0]) * 1000);
-	sunrise = new Date(epochFromJulian(calculations[1]) * 1000);
-	dawn =  new Date(epochFromJulian(calculations[0 + mode*2]) * 1000);
-	dusk =  new Date(epochFromJulian(calculations[1 + mode*2]) * 1000);
+	sunsetMinutes = (epochFromJulian(calculations[0]) % (60 * 60 * 24)) / 60;
+	sunriseMinutes = (epochFromJulian(calculations[1]) % (60 * 60 * 24)) / 60;
+	dawnMinutes =  (epochFromJulian(calculations[0 + mode*2]) % (60 * 60 * 24)) / 60;
+	duskMinutes = (epochFromJulian(calculations[1 + mode*2]) % (60 * 60 * 24)) / 60;
+		
 	
-	sunsetHeight = heightWithMinutes(	sunset.getMinutes() + 
-										sunset.getHours() * 60);
-
-	duskHeight = heightWithMinutes(	dawn.getMinutes() + 
-									dawn.getHours() * 60);
+	sunsetHeight = heightWithMinutes(sunsetMinutes);
+	
+	twillightSpace = heightWithMinutes(sunriseMinutes - sunsetMinutes);
+	
+										
+	duskHeight = heightWithMinutes(dawnMinutes);
+	nightSpace = heightWithMinutes(duskMinutes - dawnMinutes);
 									
-	twillightSpace = heightWithMinutes((sunrise.getMinutes() + 
-										sunrise.getHours() * 60) -
-									   (sunset.getMinutes() + 
-										sunset.getHours() * 60));
-	
-	nightSpace = heightWithMinutes((dusk.getMinutes() + 
-									dusk.getHours() * 60) -
-								   (dawn.getMinutes() + 
-									dawn.getHours() * 60));
 									
 	if(mode == 0){
 		sunsetHeight = duskHeight = 0;
@@ -131,9 +125,10 @@ var setBars = function(calculations, mode) {
 	}
 
 	$('#pretwillight').css("height", sunsetHeight);
+	$('#twillightspace').css("height", twillightSpace);
+	
 	$('#prenight').css("height", duskHeight);
 
-	$('#twillightspace').css("height", twillightSpace);
 	$('#nightspace').css("height", nightSpace);
 	
 	// Dnie i noce polarne

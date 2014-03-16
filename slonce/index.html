@@ -73,14 +73,12 @@
 		
 		if(page == 4)
 		{
-			sunset = new Date(epochFromJulian(calculations[0]) * 1000);
-			dawn =  new Date(epochFromJulian(calculations[2]) * 1000);
-	
-			sunsetHeight = heightWithMinutes(	sunset.getMinutes() + 
-												sunset.getHours() * 60) - 20;
+			sunsetMinutes = (epochFromJulian(calculations[0]) % (60 * 60 * 24)) / 60;
+			dawnMinutes =  (epochFromJulian(calculations[2]) % (60 * 60 * 24)) / 60;
+			
+			sunsetHeight = heightWithMinutes(sunsetMinutes) - 20;
 
-			dawnHeight = heightWithMinutes(	dawn.getMinutes() + 
-											dawn.getHours() * 60) - 27;
+			dawnHeight = heightWithMinutes(dawnMinutes) - 27;
 			
 			$( "#left" ).css("line-height", dawnHeight + "px");
 			$( "#right" ).css("line-height", 2*sunsetHeight + "px");
@@ -134,17 +132,7 @@
 	}
     </script>
 </head>
-<body>
-	<!--
-	<svg id='a'>
-			<polygon fill="white" points="5,12 20,20 35,12 34,9 20,17 6,9"/>
-			<polygon fill="green" points="5,8 20,0 35,8 34,11 20,3 6,11"/>			
-	</svg>
-		-->
-
-	
-	
-	
+<body>	
 	<!-- ><div id='button'></div> -->
 	<svg id='button'>
 			<polygon id='buttons' points="5,12 20,20 35,12 34,9 20,17 6,9"/>

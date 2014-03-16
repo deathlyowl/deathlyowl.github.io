@@ -23,7 +23,6 @@
 		}
 		else
 		{
-
 			$( "#city" ).css("opacity", 0);
 		}
 		$('#lines').css("opacity", parameters[page][1]);
@@ -42,7 +41,6 @@
 		$('#right').css("color", parameters[page][9]);
 		$('#subtext').css("color", parameters[page][9]);
 		$('#subtextLeft').css("color", parameters[page][9]);
-		$('#gps').css("background", parameters[page][5]);
 		
 		$('#indicator').css("opacity", parameters[page][10]);
 		$('#indicator').css("background-image", parameters[page][11]);
@@ -51,9 +49,19 @@
 		$( "ul li" ).css("opacity", .25);
 		$( "ul li" ).css("background", parameters[page][9]);
 		$( "ul li:nth-child(" + (page+1) +")" ).css("opacity", 1);
-		$( "#button" ).css("background", parameters[page][9]);
-		$( "#backButton" ).css("background", parameters[page][9]);
-		$( "#owl" ).css("background", parameters[page][9]);
+		$( "#buttons" ).css("fill", parameters[page][9]);
+		$( "#backButtons" ).css("fill", parameters[page][9]);
+		
+		if (page == 1)
+		{
+			$( "#owl" ).css("background-image", "url('owl_red.png')");
+		}
+		else
+		{
+			$( "#owl" ).css("background-image", "url('owl.png')");
+		}
+		//$( "#owl" ).css("background", parameters[page][9]);
+		
 		if(page == 0)
 		{
 			$( "#backButton" ).css("opacity", 0);
@@ -127,8 +135,26 @@
     </script>
 </head>
 <body>
-	<div id='button'></div>
-	<div id='backButton'></div>
+	<!--
+	<svg id='a'>
+			<polygon fill="white" points="5,12 20,20 35,12 34,9 20,17 6,9"/>
+			<polygon fill="green" points="5,8 20,0 35,8 34,11 20,3 6,11"/>			
+	</svg>
+		-->
+
+	
+	
+	
+	<!-- ><div id='button'></div> -->
+	<svg id='button'>
+			<polygon id='buttons' points="5,12 20,20 35,12 34,9 20,17 6,9"/>
+	</svg>
+
+	<svg id='backButton'>
+		<polygon id='backButtons' points="5,8 20,0 35,8 34,11 20,3 6,11"/>			
+	</svg>
+	
+	<!--<div id='backButton'></div>-->
 	<a href="mailto:pawel@deathlyowl.com?subject=Hello, Deathly Owl!" id="owl"></a>
 	
 	<!-- Feedback -->
@@ -184,7 +210,6 @@
 	
 	<!-- Pages -->
 	<a href="https://itunes.apple.com/us/app/slonce/id647719424" id="appStore"></a>
-	<div id='gps'></div>
 	<div id='city'>Wrocław</div>
 </body>
 </html>

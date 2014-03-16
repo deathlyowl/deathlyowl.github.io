@@ -46,6 +46,13 @@ body {
 	background: black;
 }
 
+#prenight
+{
+	background-image: url('gps.svg');
+	background-repeat: no-repeat;
+	background-position: 290px 10px;
+}
+
 #pretwillight 	{ height: 0px;}
 #twillightspace	{ height: 568px;}
 #posttwillight 	{ height: 568px;}
@@ -157,7 +164,7 @@ body {
 	margin-top:304px;
 	margin-right:-20px;
 	-webkit-transition: .75s ease-in;
-    -webkit-mask-image: url('arrow.png');
+    /*-webkit-mask-image: url('arrow.png');*/
 }
 
 #owl {
@@ -170,8 +177,9 @@ body {
 	bottom: 40px;
 	
 	-webkit-transition: .75s ease-in;
-    -webkit-mask-image: url('owl.png');
+    /*-webkit-mask-image: url('owl.png');*/
 	
+	background-image: url('owl.png');
 	
 }
 
@@ -195,24 +203,6 @@ body {
 	-moz-transition: .75s ease-in;
 	
 	opacity:0;
-}
-
-#gps {
-	
-	width: 20px;
-	height: 20px;
-    -webkit-mask-image: url('gps.png');
-	
-	position:fixed;
-	left: 50%;
-	top: 50%;
-	margin-left:130px;
-	margin-top:-274px;
-	
-	-webkit-transition: .75s ease-in;
-	-moz-transition: .75s ease-in;
-	
-	opacity:1;
 }
 
 #city {
@@ -258,10 +248,10 @@ body {
 	top: 50%;
 	margin-top:-324px;
 	margin-right:-20px;
-	-webkit-transition: .75s ease-in;
-    -webkit-mask-image: url('backArrow.png');
+	/*-webkit-transition: .75s ease-in;*/
+    /*-webkit-mask-image: url('backArrow.png');*/
 	-moz-transition: .75s ease-in;
-    -moz-mask-image: url('backArrow.png');
+    /*-moz-mask-image: url('backArrow.png');*/
 }
 
 

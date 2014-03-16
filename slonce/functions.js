@@ -112,7 +112,7 @@ var setBars = function(calculations, mode) {
 	
 	sunsetHeight = heightWithMinutes(sunsetMinutes);
 	
-	twilightSpace = heightWithMinutes(sunriseMinutes - sunsetMinutes);
+	twillightSpace = heightWithMinutes(sunriseMinutes - sunsetMinutes);
 	
 										
 	duskHeight = heightWithMinutes(dawnMinutes);
@@ -121,11 +121,11 @@ var setBars = function(calculations, mode) {
 									
 	if(mode == 0){
 		sunsetHeight = duskHeight = 0;
-		twilightSpace = nightSpace = 568;
+		twillightSpace = nightSpace = 568;
 	}
 
-	$('#pretwilight').css("height", sunsetHeight);
-	$('#twilightspace').css("height", twilightSpace);
+	$('#pretwillight').css("height", sunsetHeight);
+	$('#twillightspace').css("height", twillightSpace);
 	
 	$('#prenight').css("height", duskHeight);
 
@@ -134,16 +134,16 @@ var setBars = function(calculations, mode) {
 	// Dnie i noce polarne
 	if(mode != 0){
 		if(calculations[8] == -1){
-			$('#pretwilight').css("height", 0);
+			$('#pretwillight').css("height", 0);
 			$('#prenight').css("height", 0);
 
-			$('#twilightspace').css("height", 568);
+			$('#twillightspace').css("height", 568);
 			$('#nightspace').css("height", 568);
 		}else if(calculations[8] == 0){
-			$('#pretwilight').css("height", 284);
+			$('#pretwillight').css("height", 284);
 			$('#prenight').css("height", 284);
 
-			$('#twilightspace').css("height", 0);
+			$('#twillightspace').css("height", 0);
 			$('#nightspace').css("height", 0);
 		}else if(calculations[8] == 3){
 			if(mode == 3)

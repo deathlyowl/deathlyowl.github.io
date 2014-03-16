@@ -46,10 +46,10 @@ var parameters = [
   	[0, 0, 0, 0, colors[16], appColors[0], 1, "Słońce", "the app", appColors[0], 0, "url('navis.png')", "", ""],
   	[0, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the clock", colors[16], 0, "url('astro.png')", "", "This white line is the <strong>hand</strong> of it."],
 	[1, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "url('civil.png')", "", "We use GPS.<br>We know our craft.<br> We are Polish engineers."],
-	[1, 0, 0, 0, appColors[3], appColors[3], 0, "<span style=\"color: rgba(1,1,1,.2);\">night</span>", "<span style=\"color: rgba(1,1,1,.1);\">twillight*</span>", colors[16], 0, "url('civil.png')", "you know, when it's dark and stars are above your head", "it's when there is some light but sun is still on <strong>invisible</strong> side of horizon. <br><span style=\"color: rgba(1,1,1,.2);\">*<em>not the motion picture</em></span>"],
-	[1, 0, 0, 0, appColors[3], appColors[3], 0, "civil", "twillight", colors[16], 1, "url('civil.png')", "", "When the sun is 6 degrees below the horizon."],
-  	[2, 0, 0, 0, appColors[3], appColors[3], 0, "nautical", "twillight", colors[16],1, "url('navis.png')", "", "When there is enough sunlight for the horizon to be distinguishable."],
-  	[3, 0, 0, 0, appColors[3], appColors[3], 0, "astronomical", "twillight", colors[16],1, "url('astro.png')", "", "When you cannot observe stars."],
+	[1, 0, 0, 0, appColors[3], appColors[3], 0, "<span style=\"color: rgba(1,1,1,.2);\">night</span>", "<span style=\"color: rgba(1,1,1,.1);\">twilight*</span>", colors[16], 0, "url('civil.png')", "you know, when it's dark and stars are above your head", "it's when there is some light but sun is still on <strong>invisible</strong> side of horizon. <br><span style=\"color: rgba(1,1,1,.2);\">*<em>not the motion picture</em></span>"],
+	[1, 0, 0, 0, appColors[3], appColors[3], 0, "civil", "twilight", colors[16], 1, "url('civil.png')", "", "When the sun is 6 degrees below the horizon."],
+  	[2, 0, 0, 0, appColors[3], appColors[3], 0, "nautical", "twilight", colors[16],1, "url('navis.png')", "", "When there is enough sunlight for the horizon to be distinguishable."],
+  	[3, 0, 0, 0, appColors[3], appColors[3], 0, "astronomical", "twilight", colors[16],1, "url('astro.png')", "", "When you cannot observe stars."],
 	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It's <strong>colorful</strong>.<br> It's <strong>moving</strong>.", "Add the light to your time for <em>$0.99</em>"]
 ];
 
@@ -112,7 +112,7 @@ var setBars = function(calculations, mode) {
 	
 	sunsetHeight = heightWithMinutes(sunsetMinutes);
 	
-	twillightSpace = heightWithMinutes(sunriseMinutes - sunsetMinutes);
+	twilightSpace = heightWithMinutes(sunriseMinutes - sunsetMinutes);
 	
 										
 	duskHeight = heightWithMinutes(dawnMinutes);
@@ -121,11 +121,11 @@ var setBars = function(calculations, mode) {
 									
 	if(mode == 0){
 		sunsetHeight = duskHeight = 0;
-		twillightSpace = nightSpace = 568;
+		twilightSpace = nightSpace = 568;
 	}
 
-	$('#pretwillight').css("height", sunsetHeight);
-	$('#twillightspace').css("height", twillightSpace);
+	$('#pretwilight').css("height", sunsetHeight);
+	$('#twilightspace').css("height", twilightSpace);
 	
 	$('#prenight').css("height", duskHeight);
 
@@ -134,16 +134,16 @@ var setBars = function(calculations, mode) {
 	// Dnie i noce polarne
 	if(mode != 0){
 		if(calculations[8] == -1){
-			$('#pretwillight').css("height", 0);
+			$('#pretwilight').css("height", 0);
 			$('#prenight').css("height", 0);
 
-			$('#twillightspace').css("height", 568);
+			$('#twilightspace').css("height", 568);
 			$('#nightspace').css("height", 568);
 		}else if(calculations[8] == 0){
-			$('#pretwillight').css("height", 284);
+			$('#pretwilight').css("height", 284);
 			$('#prenight').css("height", 284);
 
-			$('#twillightspace').css("height", 0);
+			$('#twilightspace').css("height", 0);
 			$('#nightspace').css("height", 0);
 		}else if(calculations[8] == 3){
 			if(mode == 3)

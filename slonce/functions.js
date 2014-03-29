@@ -1,6 +1,6 @@
 var pagesCount = 8;
 var direction = 0;
-var appColors = new Array( "#F4515D", "#FCA23C", "#FFCF41", "#0097FD" );
+var appColors = new Array( "#FF847F", "#FCA23C", "#FFCF41", "#0097FD" );
 
 var colors = new Array( "#FF3B30", "#FFCC00", "#4CD964", "#34AADC",
 						"#007AFF", "#5856D6", "#FF2D55", "#E0F8D8",

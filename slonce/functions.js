@@ -42,14 +42,14 @@ var parameters = [
 //[2, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "", "", "We know what we are doing.<br> We are polish engineers. <br>We are using GPS."],
 //[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in polish.<br>We are polish.", ""],	
 	
-  	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in <em>polish</em>.<br>We are <em>polish</em>.", ""],
+  	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It means <em>Sun</em> in <em>Polish</em>.<br>We are <em>Polish</em>.", ""],
   	[0, 0, 0, 0, colors[16], appColors[0], 1, "Słońce", "the app", appColors[0], 0, "url('navis.png')", "", ""],
   	[0, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the clock", colors[16], 0, "url('astro.png')", "", "This white line is the <strong>hand</strong> of it."],
-	[1, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "url('civil.png')", "", "We are using GPS.<br>We know what we are doing.<br> We are polish engineers."],
-	[1, 0, 0, 0, appColors[3], appColors[3], 0, "<span style=\"color: rgba(1,1,1,.2);\">night</span>", "<span style=\"color: rgba(1,1,1,.1);\">twillight*</span>", colors[16], 0, "url('civil.png')", "you know, when it's dark and stars are above your head", "it's when there is some light but sun is still on <strong>invisible</strong> side of horizon. <br><span style=\"color: rgba(1,1,1,.2);\">*<em>not the motion picture</em></span>"],
-	[1, 0, 0, 0, appColors[3], appColors[3], 0, "civil", "twillight", colors[16], 1, "url('civil.png')", "", "When the sun is 6 degrees below the horizon."],
-  	[2, 0, 0, 0, appColors[3], appColors[3], 0, "nautical", "twillight", colors[16],1, "url('navis.png')", "", "When there is enough sunlight for the horizon to be distinguishable."],
-  	[3, 0, 0, 0, appColors[3], appColors[3], 0, "astronomical", "twillight", colors[16],1, "url('astro.png')", "", "When you cannot observe stars."],
+	[1, 1, 1, 1, appColors[3], appColors[3], 0, "Słońce", "the sundial", colors[16] ,0 , "url('civil.png')", "", "We use GPS.<br>We know our craft.<br> We are Polish engineers."],
+	[1, 0, 0, 0, appColors[3], appColors[3], 0, "<span style=\"color: rgba(1,1,1,.2);\">night</span>", "<span style=\"color: rgba(1,1,1,.1);\">twilight*</span>", colors[16], 0, "url('civil.png')", "you know, when it's dark and stars are above your head", "it's when there is some light but sun is still on <strong>invisible</strong> side of horizon. <br><span style=\"color: rgba(1,1,1,.2);\">*<em>not the motion picture</em></span>"],
+	[1, 0, 0, 0, appColors[3], appColors[3], 0, "civil", "twilight", colors[16], 1, "url('civil.png')", "", "When the sun is 6 degrees below the horizon."],
+  	[2, 0, 0, 0, appColors[3], appColors[3], 0, "nautical", "twilight", colors[16],1, "url('navis.png')", "", "When there is enough sunlight for the horizon to be distinguishable."],
+  	[3, 0, 0, 0, appColors[3], appColors[3], 0, "astronomical", "twilight", colors[16],1, "url('astro.png')", "", "When you cannot observe stars."],
 	[0, 0, 0, 0, appColors[0], appColors[0], 1, "Słońce", "", "white", 0, "", "It's <strong>colorful</strong>.<br> It's <strong>moving</strong>.", "Add the light to your time for <em>$0.99</em>"]
 ];
 
@@ -101,29 +101,23 @@ var setPagesize = function() {
 }
 
 var setBars = function(calculations, mode) {
-	
 	dawnIndex = mode;
+		
 	
-	sunset = new Date(epochFromJulian(calculations[0]) * 1000);
-	sunrise = new Date(epochFromJulian(calculations[1]) * 1000);
-	dawn =  new Date(epochFromJulian(calculations[0 + mode*2]) * 1000);
-	dusk =  new Date(epochFromJulian(calculations[1 + mode*2]) * 1000);
+	sunsetMinutes = (epochFromJulian(calculations[0]) % (60 * 60 * 24)) / 60;
+	sunriseMinutes = (epochFromJulian(calculations[1]) % (60 * 60 * 24)) / 60;
+	dawnMinutes =  (epochFromJulian(calculations[0 + mode*2]) % (60 * 60 * 24)) / 60;
+	duskMinutes = (epochFromJulian(calculations[1 + mode*2]) % (60 * 60 * 24)) / 60;
+		
 	
-	sunsetHeight = heightWithMinutes(	sunset.getMinutes() + 
-										sunset.getHours() * 60);
-
-	duskHeight = heightWithMinutes(	dawn.getMinutes() + 
-									dawn.getHours() * 60);
+	sunsetHeight = heightWithMinutes(sunsetMinutes);
+	
+	twillightSpace = heightWithMinutes(sunriseMinutes - sunsetMinutes);
+	
+										
+	duskHeight = heightWithMinutes(dawnMinutes);
+	nightSpace = heightWithMinutes(duskMinutes - dawnMinutes);
 									
-	twillightSpace = heightWithMinutes((sunrise.getMinutes() + 
-										sunrise.getHours() * 60) -
-									   (sunset.getMinutes() + 
-										sunset.getHours() * 60));
-	
-	nightSpace = heightWithMinutes((dusk.getMinutes() + 
-									dusk.getHours() * 60) -
-								   (dawn.getMinutes() + 
-									dawn.getHours() * 60));
 									
 	if(mode == 0){
 		sunsetHeight = duskHeight = 0;
@@ -131,9 +125,10 @@ var setBars = function(calculations, mode) {
 	}
 
 	$('#pretwillight').css("height", sunsetHeight);
+	$('#twillightspace').css("height", twillightSpace);
+	
 	$('#prenight').css("height", duskHeight);
 
-	$('#twillightspace').css("height", twillightSpace);
 	$('#nightspace').css("height", nightSpace);
 	
 	// Dnie i noce polarne

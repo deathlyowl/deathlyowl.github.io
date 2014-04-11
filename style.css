@@ -1,0 +1,107 @@
+@import url(fontface.csss);
+/* Zerowanie marginesów */
+* {
+	padding:0;
+	margin:0;
+}
+
+html {
+	font-family: 'Lato';
+	background: #B163A3;
+	color: #D385C5;
+	color: #E496D6;
+	coloor: #F5A7E7;
+}
+
+nav {
+	color: #B163A3;
+	background: #D385C5;
+}
+
+nav a {
+	color: #B163A3;
+}
+
+nav ul{
+	list-style: none;
+	height:96px;
+	font-weight:400;
+	padding: 4px 0;
+}
+
+nav ul li {
+	display:block;
+	float:right;
+	border: 2px solid #D385C5;
+	height:32px;
+	line-height:32px;
+	border-radius:16px;
+	padding: 0 10px;
+	margin: 28px 12px;
+	font-size:1.25em;
+}
+
+#logo {
+	margin:0;
+	float:left;
+	padding:0;
+	height:64px;
+	border:0;
+}
+
+nav ul li:hover{
+	border: 2px solid #B163A3;
+}
+
+nav ul li.active {
+	color: white;
+	border-color:white;
+}
+
+.container {
+	width:928px;
+	margin:auto;
+}
+
+.one, .two, .three, .four, .full {
+	float:left;
+}
+
+.one 	{width:160px;}
+.two	{width:352px;}
+.three	{width:544px;}
+.four	{width:736px;}
+.full	{width:100%;}
+
+.sep {
+	min-height:1px;
+	float:left;
+	width:32px;
+}
+
+hr {
+	clear:both;
+	display:block;
+	border:none;
+}
+
+#who{
+	background: #A05292 url(logo-kopia.png);
+	background-repeat:no-repeat;
+background-position:center; 
+	baackground: #904181;
+}
+
+#who h1{
+	margin: 1.5em 0;
+	font-size:3em;
+	font-weight:400;
+	color:white;
+}
+
+#who h1 span{
+	font-weight:200;
+	color: #D385C5;
+	font-size:.5em;
+	text-shadow: black 0.1em 0.1em .5em;
+}

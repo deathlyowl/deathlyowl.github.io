@@ -183,6 +183,27 @@ background: url(port_ios.png) center no-repeat;
 
 
 
+footer a{
+	color:#333;
+	text-decoration:none;
+	font-style:italic;
+	border-bottom:1px solid;
+}
 
+footer a:hover{
+	color:#444;
+}
 
+footer{
+	font-size:14px;
+	line-height:1.5em;
+	text-align:center;
+	padding:64px;
+	font-weight:200;
+	color:#333;
+	background:#111;
+}
 
+footer span{
+	color:#611;
+}

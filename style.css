@@ -35,6 +35,26 @@ nav a {
 padding:8px 0;
 }
 
+.logo {
+    -webkit-transition:1s;
+	position:fixed;
+	top:0px;
+	margin:0;
+	float:left;
+	padding:2px;
+	border:0;
+	bacskground:#D385C5;
+
+}
+
+.logo_small {
+	background:#B163A3;
+	top:8px;
+	border-radius:8px;
+	border-bottom: 8px solid #D385C5;
+}
+
+
 nav ul li {
 	display:block;
 	float:right;
@@ -47,15 +67,6 @@ nav ul li {
 	font-size:1.25em;
 }
 
-
-
-#logo {
-	margin:0;
-	float:left;
-	padding:0;
-	height:64px;
-	border:0;
-}
 
 nav ul li:hover{
 	border: 2px solid #B163A3;
@@ -102,6 +113,10 @@ padding:128px 0 64px 0;
 	height: 352px;
 }
 
+#where{
+	padding: 64px 0;
+}
+
 #what{
 padding:5em 0;
 }
@@ -138,13 +153,13 @@ text-align:center;
 }
 
 div.person h1{
-width:90%;
-margin:1em auto;
-padding:1em auto;
-	border-top: 4px solid white;
+	font-style:italic;
+	font-weight:300;
 	color:white;
-	font-weight:600;
-	font-variant:small-caps;
+	padding:10px 0;
+	margin:10px 0;
+	border-bottom: 2px solid white;
+
 }
 
 div.person h2{

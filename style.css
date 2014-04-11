@@ -11,7 +11,6 @@ html {
 	color: #D385C5;
 	color: #E496D6;
 	coloor: #F5A7E7;
-	margin-top:96px;
 }
 
 nav {
@@ -26,11 +25,14 @@ nav a {
 	color: #B163A3;
 }
 
-nav ul{
+.header{
 	list-style: none;
-	height:96px;
 	font-weight:400;
-	padding: 4px 0;
+	padding: 32px 0;
+    -webkit-transition:1s;
+}
+.header_small{
+padding:8px 0;
 }
 
 nav ul li {
@@ -41,9 +43,11 @@ nav ul li {
 	line-height:32px;
 	border-radius:16px;
 	padding: 0 10px;
-	margin: 28px 12px;
+	margin: 0 12px;
 	font-size:1.25em;
 }
+
+
 
 #logo {
 	margin:0;
@@ -91,10 +95,11 @@ hr {
 }
 
 #who{
-padding:3em 0;
+padding:128px 0 64px 0;
 	background: #A05292 url(owl_bg.png) 100% 40%;
 	background-repeat:no-repeat;
 	baackground: #904181;
+	height: 352px;
 }
 
 #what{
@@ -123,9 +128,6 @@ padding:1em 0;
 	etext-shadow: black 0.1em 0.1em .5em;
 }
 
-.red{background:red;}
-
-.green{background:green;}
 
 img.person {
 border-radius:80px;
@@ -136,7 +138,7 @@ text-align:center;
 }
 
 div.person h1{
-width:80%;
+width:90%;
 margin:1em auto;
 padding:1em auto;
 	border-top: 4px solid white;
@@ -160,9 +162,9 @@ background: url(port_ios.png) center no-repeat;
 
 
 
+.red{background:red; color:yellow;}
 
-
-
+.green{background:green;}
 
 
 

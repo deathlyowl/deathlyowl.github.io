@@ -317,6 +317,9 @@ figcaption > p {
 	padding: 8px;
 }
 .behance {
+	position: relative;
+	display: block;
+	margin: auto;
 	width: 64px;
 	height: 64px;
 }

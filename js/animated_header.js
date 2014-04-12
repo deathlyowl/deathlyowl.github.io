@@ -18,8 +18,7 @@ var cbpAnimatedHeader = (function() {
 		where = document.querySelector( 'nav a:nth-child(2)' ),
 		didScroll = false,
 		first = 512,
-		second = 700,
-		whird = 900,
+		second = 1200,
 		changeHeaderOn = 512;
 
 	function init() {

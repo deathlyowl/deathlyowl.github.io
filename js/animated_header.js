@@ -30,6 +30,10 @@ var cbpAnimatedHeader = (function() {
 				setTimeout( scrollPage, 125 );
 			}
 		}, false );
+		
+		window.addEventListener( 'scroll', function( event ) {
+			menu();
+		}, false );
 	}
 
 	function scrollPage() {
@@ -42,7 +46,6 @@ var cbpAnimatedHeader = (function() {
 			classie.remove( header, 'header_small' );
 			classie.remove( logo, 'logo_small' );
 		}
-		menu();
 		
 		didScroll = false;
 	}

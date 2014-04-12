@@ -307,13 +307,15 @@ figure.caption.small:hover img.cover{
 }
 
 figcaption > h3 {
+	font-size: 2em;
 	color: white;
 	font-weight:700;
 	padding: 8px;
 }
 
 figcaption > p {
-	font-weight:400;
+	font-size: 1.1em;
+	font-weight: 300;
 	padding: 8px;
 }
 .behance {
@@ -323,5 +325,5 @@ figcaption > p {
 	width: 32px;
 	height: 32px;
 	padding: 8px;
-	margin-top: 136px;
+	margin-top: 108px;
 }

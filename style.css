@@ -145,6 +145,25 @@ padding:1em 0;
 	color:white;
 }
 
+.subline{
+	
+text-align:left;
+	font-size:3.5em;
+	font-weight:300;
+	font-style:italic;
+	color:white;
+	padding:16px 0 0px 0;
+	padding-left:10px;
+}
+
+.block{
+text-align:left;
+padding: 32px 0;
+	padding-left:10px;
+font-size:1.14em;
+font-weight:300;
+}
+
 .headline span{
 	font-weight:200;
 	color: #D385C5;

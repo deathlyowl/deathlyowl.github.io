@@ -21,7 +21,6 @@ width:100%;
 	color: #B163A3;
 	background: #D385C5;
 	z-index:100;
-
 }
 
 nav a {
@@ -38,6 +37,14 @@ nav a {
 padding:8px 0;
 }
 
+.logocontainer {
+float:left;
+padding:0;
+border:0;
+}
+
+.logocontainer:hover{border:0;}
+
 .logo {
     -webkit-transition:1s;
 	position:fixed;
@@ -46,8 +53,6 @@ padding:8px 0;
 	float:left;
 	padding:2px;
 	border:0;
-	bacskground:#D385C5;
-
 }
 
 .logo_small {
@@ -57,8 +62,8 @@ padding:8px 0;
 	border-bottom: 8px solid #D385C5;
 }
 
-
-nav ul li {
+nav a {
+text-decoration:none;
 	display:block;
 	float:right;
 	border: 2px solid #D385C5;
@@ -71,11 +76,11 @@ nav ul li {
 }
 
 
-nav ul li:hover{
+nav a:hover{
 	border: 2px solid #B163A3;
 }
 
-nav ul li.active {
+nav a.active {
 	color: white;
 	border-color:white;
 }

@@ -223,12 +223,12 @@ footer span{
 
 
 figure.caption {
-	background:black;
 	float:left;
 	display:block;
 	margin:0;
 	margin: 0 0 10px 10px;
   overflow:hidden;
+  border-radius:8px;
 }
 
 

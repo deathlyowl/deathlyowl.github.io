@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Deathly Owl</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 	<nav>
@@ -27,19 +28,19 @@
 		</section>
 	</article>
 
-	<article id='what'>
-		<section class='container'>
-			<div class='one'>
-				<h1>Our works</h1>
-			</div>
+	<article id='what'>		
+		<section class='container' >
+			<div class='one'></div>
 			<div class='sep'></div>
-			<div class='four projects'>
-				<a href=''><img class='project' src='Promyk.png'></a>
-				<a href=''><img class='project' src='Slonce.png'></a>
-				<a href=''><img class='project' src='Sigml.png'></a>
-				<a href=''><img class='project' src='Baltyk.png'></a>
-				<a href=''><img class='project' src='Slowa.png'></a>
-			</div>
+			<div class='four '>
+		        <div >
+					<figure><img class='project' src='Promyk.png'></figure>
+					<figure><img class='project' src='Slonce.png'></figure>
+					<figure><img class='project' src='Sigml.png'></figure>
+					<figure><img class='project' src='Slowa.png'></figure>
+					<figure><img class='project' src='Baltyk.png'></figure>
+				</div>
+			</div><!-- /grid-wrap -->
 		</section>
 			<hr>
 	</article>
@@ -47,7 +48,6 @@
 	<article id='where'>
 		<section class='container'>
 			<div class='three'>
-				<h1>Our works</h1>
 			</div>
 			<div class='sep'></div>
 
@@ -70,7 +70,11 @@
 		Made with <span>&#10084;</span> by Deathly Owl, using <a href=''>Lato</a>.
 		</section>
 	</footer>
-	<script src="classie.js"></script>
-	<script src="animated_header.js"></script>
+
+	<script src="js/classie.js"></script>
+	<script src="js/animated_header.js"></script>
+	<script>
+		new grid3D( document.getElementById( 'grid3d' ) );
+	</script>
 </body>
 </html>

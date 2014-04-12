@@ -257,7 +257,7 @@ figure.caption figcaption{
 
 figure.caption.big figcaption{
 	width: 304px;
-	height: 320px;
+	height: 304px;
 	margin-left:726px;
 	top:-320px;
 }
@@ -319,7 +319,9 @@ figcaption > p {
 .behance {
 	position: relative;
 	display: block;
-	margin: auto;
+	float: right;
 	width: 32px;
 	height: 32px;
+	padding: 8px;
+	margin-top: 136px;
 }

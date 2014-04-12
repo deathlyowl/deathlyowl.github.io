@@ -377,3 +377,10 @@ figure.caption.small:hover img.cover{
 	font-size: 1.1em;
 	color: white;
 }
+.behance-small-baltyk {
+	position: relative;
+	display: block;
+	float: right;
+	width: 32px;
+	height: 32px;
+	margin-top: 40px;

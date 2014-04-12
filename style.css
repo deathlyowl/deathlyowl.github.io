@@ -369,3 +369,11 @@ figure.caption.small:hover img.cover{
 	height: 32px;
 	margin-top: 25px;
 }
+.wip-big {
+	position: relative;
+	display: block;
+	float: right;
+	margin-top: 70px;
+	font-size: 1.1em;
+	color: white;
+}

@@ -276,7 +276,7 @@ figure.caption.small figcaption{
 	top:-160px;
 }
 
-figure.caption img{
+figure.caption img.cover{
 	-webkit-transition:1s;
 	position:relative;
 	float:left;
@@ -294,15 +294,15 @@ figure.caption.small:hover figcaption{
 	margin-left:198px;
 }
 
-figure.caption.big:hover img{
+figure.caption.big:hover img.cover{
 	left:-160px;
 }
 
-figure.caption.medium:hover img{
+figure.caption.medium:hover img.cover{
 	left:-90px;
 }
 
-figure.caption.small:hover img{
+figure.caption.small:hover img.cover{
 	left:-80px;
 }
 

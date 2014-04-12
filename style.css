@@ -256,7 +256,7 @@ figure.caption figcaption{
 }
 
 figure.caption.big figcaption{
-	width: 300px;
+	width: 304px;
 	height: 320px;
 	margin-left:726px;
 	top:-320px;
@@ -309,10 +309,14 @@ figure.caption.small:hover img{
 figcaption > h3 {
 	color: white;
 	font-weight:700;
-	padding: 10px;
+	padding: 8px;
 }
 
 figcaption > p {
 	font-weight:400;
-	padding: 10px;
+	padding: 8px;
+}
+.behance {
+	width: 64px;
+	height: 64px;
 }

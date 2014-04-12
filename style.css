@@ -228,7 +228,6 @@ figure.caption {
 	margin:0;
 	margin: 0 0 10px 10px;
   overflow:hidden;
-  border-radius:8px;
 }
 
 
@@ -253,6 +252,8 @@ figure.caption figcaption{
 	float:left;
 	background: #A05292;
 	color:#D385C5;
+  border-bottom-right-radius:8px;
+  border-top-right-radius:8px;
 }
 
 figure.caption.big figcaption{

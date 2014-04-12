@@ -351,15 +351,14 @@ figure.caption.small:hover img.cover{
 }
 
 .small > figcaption > h3 {
-	line-height: 1.75em;
+	line-height: 2em;
 	font-size: 1.25em;
 	color: white;
 	font-weight:700;
 }
 
 .small > figcaption > p {
-	padding-bottom: 0.6em;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	font-weight: 300;
 }
 .behance-small {
@@ -368,5 +367,5 @@ figure.caption.small:hover img.cover{
 	float: right;
 	width: 32px;
 	height: 32px;
-	margin-top: 40px;
+	margin-top: 25px;
 }

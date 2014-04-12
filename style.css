@@ -227,7 +227,7 @@ figure.caption {
 	display:block;
 	margin:0;
 	margin: 0 0 10px 10px;
-    overflow:hidden;
+  overflow:hidden;
 }
 
 
@@ -252,14 +252,14 @@ figure.caption figcaption{
 	float:left;
 	background: #A05292;
 	color:#D385C5;
-	padding: 8px;
 }
 
 figure.caption.big figcaption{
-	width: 304px;
-	height: 304px;
+	width: 288px;
+	height: 288px;
 	margin-left:726px;
 	top:-320px;
+	padding: 16px;
 }
 
 figure.caption.medium figcaption{
@@ -307,16 +307,16 @@ figure.caption.small:hover img.cover{
 }
 
 figcaption > h3 {
+	line-height: 2.5em;
 	font-size: 2em;
 	color: white;
 	font-weight:700;
-	padding: 8px;
 }
 
 figcaption > p {
+	padding-bottom: 1em;
 	font-size: 1.1em;
 	font-weight: 300;
-	padding: 8px;
 }
 .behance {
 	position: relative;
@@ -324,6 +324,5 @@ figcaption > p {
 	float: right;
 	width: 32px;
 	height: 32px;
-	padding: 8px;
-	margin-top: 108px;
+	margin-top: 80px;
 }

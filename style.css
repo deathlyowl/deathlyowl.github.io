@@ -263,10 +263,11 @@ figure.caption.big figcaption{
 }
 
 figure.caption.medium figcaption{
-	width: 179px;
-	height: 330px;
+	width: 147px;
+	height: 298px;
 	margin-left:358px;
 	top:-330px;
+	padding: 16px;
 }
 
 figure.caption.small figcaption{
@@ -306,23 +307,43 @@ figure.caption.small:hover img.cover{
 	left:-80px;
 }
 
-figcaption > h3 {
+.big > figcaption > h3 {
 	line-height: 2.5em;
 	font-size: 2em;
 	color: white;
 	font-weight:700;
 }
 
-figcaption > p {
+.big > figcaption > p {
 	padding-bottom: 1em;
 	font-size: 1.1em;
 	font-weight: 300;
 }
-.behance {
+.behance-big {
 	position: relative;
 	display: block;
 	float: right;
 	width: 32px;
 	height: 32px;
 	margin-top: 80px;
+}
+.medium > figcaption > h3 {
+	line-height: 2.75em;
+	font-size: 1.75em;
+	color: white;
+	font-weight:700;
+}
+
+.medium > figcaption > p {
+	padding-bottom: 0.8em;
+	font-size: 0.9em;
+	font-weight: 300;
+}
+.behance-medium {
+	position: relative;
+	display: block;
+	float: right;
+	width: 32px;
+	height: 32px;
+	margin-top: 90px;
 }

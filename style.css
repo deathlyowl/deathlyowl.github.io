@@ -250,12 +250,13 @@ figure.caption figcaption{
 	position:relative;
 	-webkit-transition:1s;
 	float:left;
-	background:black;
-	color:white;
+	background: #A05292;
+	color:#D385C5;
+	padding: 10px;
 }
 
 figure.caption.big figcaption{
-	width: 320px;
+	width: 300px;
 	height: 320px;
 	margin-left:726px;
 	top:-320px;
@@ -303,4 +304,15 @@ figure.caption.medium:hover img{
 
 figure.caption.small:hover img{
 	left:-80px;
+}
+
+figcaption > h3 {
+	color: white;
+	font-weight:700;
+	padding: 10px;
+}
+
+figcaption > p {
+	font-weight:400;
+	padding: 10px;
 }

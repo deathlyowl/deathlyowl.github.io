@@ -38,6 +38,7 @@ var cbpAnimatedHeader = (function() {
 			menu();
 		}, false );
 		
+		/*
 	    window.addEventListener('mousemove', function( event ) {
 	        //alert('mouse');
 			percX =  Math.floor(100 * event.pageX / screen.width);
@@ -49,6 +50,7 @@ var cbpAnimatedHeader = (function() {
 			owl.setAttribute("style","background-position: "+ x +"% "+y+"%;");
 			
 		}, false);
+		*/
 	}
 
 	function scrollPage() {
@@ -95,6 +97,11 @@ var cbpAnimatedHeader = (function() {
 			classie.remove( where, 'active' );
 			classie.add( how, 'active' );
 		}
+		
+		y = 50-sy/5;
+		
+		//alert(percX+'% '+percY+'%');
+		owl.setAttribute("style","background-position: 100% "+y+"%;");
 	}
 
 	init();

@@ -120,8 +120,10 @@ hr {
 	height: 352px;
 }
 
+a#what{background:green;}
+a#where{background:yellow;}
 
-#where, #what, #how{ padding:128px 0;}
+#where, #what, #how{ padding:128px 0 0 0;}
 
 #who p{
 font-style: italic;
@@ -303,6 +305,7 @@ footer a:hover{
 }
 
 footer{
+margin-top:128px;
 	font-size:14px;
 	line-height:1.5em;
 	text-align:center;

@@ -189,7 +189,7 @@ float:left;
 position:relative;
 width:120px;
 height:72px;
-margin-top:16px;
+margin-top:32px;
 padding:0 0 0 16px;
 top:0;
 top:-128px;
@@ -198,10 +198,12 @@ lefst:120px;
 -webkit-transition:.5s;
 	background: #D385C5;
 	color:white;
+	opacity:0;
 }
 
 .techni:hover .technidesc{
 left:120px;
+opacity:1;
 }
 
 .techni:hover .techniname{

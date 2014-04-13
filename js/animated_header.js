@@ -21,7 +21,7 @@ var cbpAnimatedHeader = (function() {
 		didScroll = false,
 		first = 512,
 		second = 2250,
-		third = 99900,
+		third = 3500,
 		changeHeaderOn = 512;
 
 	function init() {

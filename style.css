@@ -115,20 +115,14 @@ hr {
 }
 
 #who{
-padding:128px 0 64px 0;
+	padding:128px 0 64px 0;
 	background: #A05292 url(owl_bg.png) 100% 50%;
 	background-repeat:no-repeat;
 	baackground: #904181;
 	height: 352px;
 }
 
-#where{
-	padding: 64px 0;
-}
-
-#what{
-	padding:128px 0;
-}
+#where, #what, #how{ padding:128px 0;}
 
 #who p{
 font-style: italic;

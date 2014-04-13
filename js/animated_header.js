@@ -97,11 +97,11 @@ var cbpAnimatedHeader = (function() {
 			classie.remove( where, 'active' );
 			classie.add( how, 'active' );
 		}
+			y = 50-(sy/5);
 		
-		y = 50-sy/5;
+			//alert(percX+'% '+percY+'%');
+			owl.setAttribute("style","background-position: 100% "+y+"%;");
 		
-		//alert(percX+'% '+percY+'%');
-		owl.setAttribute("style","background-position: 100% "+y+"%;");
 	}
 
 	init();

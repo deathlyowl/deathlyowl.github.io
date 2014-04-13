@@ -138,9 +138,79 @@ padding:1em 0;
 	color:white;
 }
 
-.subline{
+h1.subline {
+	font-size:3.5em;
+}
 
-text-align:left;
+h2.subline {
+padding:0;
+	padding-top:2em;
+	font-size:2em;
+	text-indent:0;
+
+	color: #E496D6;
+}
+
+.techno {
+border-radius:8px;
+margin: 16px 0;
+overflow:hidden;
+	background: #D385C5;
+
+}
+
+.techni {
+	color: #B163A3;
+float:left;
+width:272px;
+height:128px;
+}
+
+.techni .techniname{
+float:left;
+width:240px;
+height:96px;
+padding:16px;
+position:relative;
+left:72px;
+-webkit-transition:.5s;
+}
+
+.techni .technidesc{
+	border-left:4px solid white;
+	font-size:12px;
+	line-height:14px;
+	font-weight:400;
+	font-style:italic;
+	float:left;
+	display:block;
+	float:left;
+	position:relative;
+	width:120px;
+	height:72px;
+	margin-top:32px;
+	padding:0 0 0 16px;
+	top:0;
+	top:-128px;
+	left:272px;
+	left:200px;
+	-webkit-transition:.5s;
+	background: #D385C5;
+	color:white;
+	opacity:0;
+}
+
+.techni:hover .technidesc{
+left:120px;
+opacity:1;
+}
+
+.techni:hover .techniname{
+left:-4px;
+}
+
+.subline{
+	text-align:left;
 	font-size:3.5em;
 	font-weight:300;
 	font-style:italic;

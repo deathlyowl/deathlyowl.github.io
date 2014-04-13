@@ -98,10 +98,38 @@ var cbpAnimatedHeader = (function() {
 			classie.add( how, 'active' );
 		}
 			y = 50-(sy/5);
-		
 			//alert(percX+'% '+percY+'%');
 			owl.setAttribute("style","background-position: 100% "+y+"%;");
+	
+		if (sy + screen.height/2 < first)
+		{
+			classie.add( document.querySelector( '#what' ), 'hidden' );
+		}
+		else
+		{
+			classie.remove( document.querySelector( '#what' ), 'hidden' );
+		}
+	
+			
+		if (sy + screen.height/2 < second)
+		{
+			classie.add( document.querySelector( '#where' ), 'hidden' );
+		}
+		else
+		{
+			classie.remove( document.querySelector( '#where' ), 'hidden' );
+		}
 		
+	
+			
+		if (sy + screen.height/2 < third)
+		{
+			classie.add( document.querySelector( '#how' ), 'hidden' );
+		}
+		else
+		{
+			classie.remove( document.querySelector( '#how' ), 'hidden' );
+		}
 	}
 
 	init();

@@ -123,7 +123,11 @@ hr {
 a#what{background:green;}
 a#where{background:yellow;}
 
-#where, #what, #how{ padding:128px 0 0 0;}
+#where, #what, #how{ padding:128px 0 0 0; -webkit-transition:1s;}
+
+.hidden{
+opacity:0;
+}
 
 #who p{
 font-style: italic;

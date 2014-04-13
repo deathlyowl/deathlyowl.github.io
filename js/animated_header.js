@@ -109,8 +109,7 @@ var cbpAnimatedHeader = (function() {
 		{
 			classie.remove( document.querySelector( '#what' ), 'hidden' );
 		}
-	
-			
+		
 		if (sy + screen.height/2 < second)
 		{
 			classie.add( document.querySelector( '#where' ), 'hidden' );
@@ -120,8 +119,6 @@ var cbpAnimatedHeader = (function() {
 			classie.remove( document.querySelector( '#where' ), 'hidden' );
 		}
 		
-	
-			
 		if (sy + screen.height/2 < third)
 		{
 			classie.add( document.querySelector( '#how' ), 'hidden' );

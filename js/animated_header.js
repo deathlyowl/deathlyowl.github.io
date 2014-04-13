@@ -13,12 +13,14 @@ var cbpAnimatedHeader = (function() {
 	var docElem = document.documentElement,
 		header = document.querySelector( '.header' ),
 		logo = document.querySelector( '.logo' ),
-		who = document.querySelector( 'nav a:nth-child(4)' ),
-		what = document.querySelector( 'nav a:nth-child(3)' ),
-		where = document.querySelector( 'nav a:nth-child(2)' ),
+		who = document.querySelector( 'nav a:nth-child(5)' ),
+		what = document.querySelector( 'nav a:nth-child(4)' ),
+		where = document.querySelector( 'nav a:nth-child(3)' ),
+		how = document.querySelector( 'nav a:nth-child(2)' ),
 		didScroll = false,
 		first = 512,
 		second = 1200,
+		third = 1500,
 		changeHeaderOn = 512;
 
 	function init() {
@@ -60,16 +62,25 @@ var cbpAnimatedHeader = (function() {
 			classie.add( who, 'active' );
 			classie.remove( what, 'active' );
 			classie.remove( where, 'active' );
+			classie.remove( how, 'active' );
 		}
 		else if (sy <= second){
 			classie.remove( who, 'active' );
 			classie.add( what, 'active' );
 			classie.remove( where, 'active' );
+			classie.remove( how, 'active' );
+		}
+		else if (sy <= third){
+			classie.remove( who, 'active' );
+			classie.remove( what, 'active' );
+			classie.add( where, 'active' );
+			classie.remove( how, 'active' );
 		}
 		else {
 			classie.remove( who, 'active' );
 			classie.remove( what, 'active' );
-			classie.add( where, 'active' );
+			classie.remove( where, 'active' );
+			classie.add( how, 'active' );
 		}
 	}
 

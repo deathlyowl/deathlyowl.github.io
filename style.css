@@ -151,15 +151,22 @@ h2.subline {
 
 .techno {
 margin: 16px 0;
-border-radius:16px;
+border-bottom-left-radius:16px;
+border-top-left-radius:16px;
 overflow:hidden;
+border-top: 4px solid white;
+border-bottom: 4px solid white;
+border-left:4px solid white;
+
 }
 
 .techni {
 	background: #E496D6;
+
+	background: #B163A3;
 	color: #B163A3;
 float:left;
-width:272px;
+width:268px;
 height:128px;
 overflow:hidden;
 }

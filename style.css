@@ -139,9 +139,66 @@ padding:1em 0;
 	color:white;
 }
 
-.subline{
+h1.subline {
+	font-size:3.5em;
+}
 
-text-align:left;
+h2.subline {
+	padding-top:2em;
+	font-size:2em;
+
+	color: #E496D6;
+}
+
+.techno {
+margin: 16px 0;
+border-radius:16px;
+overflow:hidden;
+}
+
+.techni {
+	background: #E496D6;
+	color: #B163A3;
+float:left;
+width:272px;
+height:128px;
+overflow:hidden;
+}
+
+.techni .techniname{
+float:left;
+width:240px;
+height:96px;
+padding:16px;
+
+}
+
+.techni .technidesc{
+font-size:12px;
+font-weight:400;
+font-style:italic;
+float:left;
+display:block;
+float:left;
+position:relative;
+width:120px;
+height:96px;
+padding:16px;
+top:0;
+top:-128px;
+left:272px;
+lefst:120px;
+-webkit-transition:.5s;
+	background: #D385C5;
+	color:white;
+}
+
+.techni:hover .technidesc{
+left:120px;
+}
+
+.subline{
+	text-align:left;
 	font-size:3.5em;
 	font-weight:300;
 	font-style:italic;

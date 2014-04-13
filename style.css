@@ -169,7 +169,9 @@ float:left;
 width:240px;
 height:96px;
 padding:16px;
-
+position:relative;
+left:72px;
+-webkit-transition:.5s;
 }
 
 .techni .technidesc{
@@ -185,7 +187,7 @@ height:96px;
 padding:16px;
 top:0;
 top:-128px;
-left:272px;
+left:-272px;
 lefst:120px;
 -webkit-transition:.5s;
 	background: #D385C5;
@@ -193,7 +195,11 @@ lefst:120px;
 }
 
 .techni:hover .technidesc{
-left:120px;
+left:0px;
+}
+
+.techni:hover .techniname{
+left:144px;
 }
 
 .subline{

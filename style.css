@@ -140,7 +140,7 @@ padding:1em 0;
 }
 
 .subline{
-	
+
 text-align:left;
 	font-size:3.5em;
 	font-weight:300;
@@ -415,3 +415,8 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 40px;
+
+
+span {
+	color: white;
+}

@@ -419,14 +419,7 @@ figure.caption.small:hover img.cover{
 	font-size: 1.1em;
 	font-weight: 300;
 }
-.behance-big {
-	position: relative;
-	display: block;
-	float: right;
-	width: 32px;
-	height: 32px;
-	margin-top: 80px;
-}
+
 .medium > figcaption > h3 {
 	line-height: 2.75em;
 	font-size: 1.75em;
@@ -439,15 +432,6 @@ figure.caption.small:hover img.cover{
 	font-size: 0.9em;
 	font-weight: 300;
 }
-.behance-medium {
-	position: relative;
-	display: block;
-	float: right;
-	width: 32px;
-	height: 32px;
-	margin-top: 90px;
-}
-
 .small > figcaption > h3 {
 	line-height: 2em;
 	font-size: 1.25em;
@@ -459,6 +443,32 @@ figure.caption.small:hover img.cover{
 	font-size: 0.9em;
 	font-weight: 300;
 }
+.behance-big {
+	position: relative;
+	display: block;
+	float: right;
+	width: 32px;
+	height: 32px;
+	margin-top: 80px;
+	opacity: 0.5;
+	-webkit-transition:.25s;
+}
+.behance-big:hover {
+	opacity: 1;
+}
+.behance-medium {
+	position: relative;
+	display: block;
+	float: right;
+	width: 32px;
+	height: 32px;
+	margin-top: 90px;
+	opacity: 0.5;
+	-webkit-transition:.25s;
+}
+.behance-medium:hover {
+	opacity: 1;
+}
 .behance-small {
 	position: relative;
 	display: block;
@@ -466,6 +476,11 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 25px;
+	opacity: 0.5;
+	-webkit-transition:.25s;
+}
+.behance-small:hover {
+	opacity: 1;
 }
 .wip-big {
 	position: relative;
@@ -482,6 +497,11 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 40px;
+	opacity: 0.5;
+	-webkit-transition:.25s;
+}
+.behance-small-baltyk:hover {
+	opacity: 1;
 }
 
 #contact a {
@@ -498,6 +518,7 @@ figure.caption.small:hover img.cover{
 	top: 7px;
 }
 .behance {
+	opacity: 0.5;
 	position: relative;
 	display: block;
 	float: right;

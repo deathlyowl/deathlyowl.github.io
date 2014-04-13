@@ -162,6 +162,24 @@ padding: 32px 0;
 	padding-left:10px;
 font-size:1.14em;
 font-weight:300;
+line-height:1.4em;
+}
+
+.right{
+	text-align:right;
+}
+
+.block a{
+	font-style:italic;
+	text-decoration:none;
+	border-bottom: 1px solid;
+	color: #E496D6;
+	-webkit-transition:.25s;
+}
+
+.block a:hover{
+	color: #F5A7E7;
+	padding-bottom:2px;
 }
 
 .headline span{

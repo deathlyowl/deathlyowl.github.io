@@ -17,6 +17,7 @@ var cbpAnimatedHeader = (function() {
 		what = document.querySelector( 'nav a:nth-child(4)' ),
 		where = document.querySelector( 'nav a:nth-child(3)' ),
 		how = document.querySelector( 'nav a:nth-child(2)' ),
+		owl = document.querySelector( '#who' )
 		didScroll = false,
 		first = 512,
 		second = 2250,
@@ -36,6 +37,18 @@ var cbpAnimatedHeader = (function() {
 		window.addEventListener( 'scroll', function( event ) {
 			menu();
 		}, false );
+		
+	    window.addEventListener('mousemove', function( event ) {
+	        //alert('mouse');
+			percX =  Math.floor(100 * event.pageX / screen.width);
+			percY =  Math.floor(100 * event.pageY / screen.height);
+			x = 100+(50-percX)/20;
+			y = 50-(50-percY)/20;
+			
+			//alert(percX+'% '+percY+'%');
+			owl.setAttribute("style","background-position: "+ x +"% "+y+"%;");
+			
+		}, false);
 	}
 
 	function scrollPage() {

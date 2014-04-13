@@ -214,8 +214,6 @@ height: 820px;
 background: url(port_ios.png) center no-repeat;
 }
 
-
-
 .red{background:red; color:yellow;}
 
 .green{background:green;}
@@ -414,4 +412,13 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 40px;
+}
+
+
+
+#contact a {
+	text-decoration:none;
+	color: #D385C5;
+	display:block;
+	float:right;
 }

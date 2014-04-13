@@ -450,7 +450,7 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 80px;
-	opacity: 0.5;
+	opacity: 0.2;
 	-webkit-transition:.25s;
 }
 .behance-big:hover {
@@ -463,7 +463,7 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 90px;
-	opacity: 0.5;
+	opacity: 0.2;
 	-webkit-transition:.25s;
 }
 .behance-medium:hover {
@@ -476,7 +476,7 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 25px;
-	opacity: 0.5;
+	opacity: 0.2;
 	-webkit-transition:.25s;
 }
 .behance-small:hover {
@@ -497,7 +497,7 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 40px;
-	opacity: 0.5;
+	opacity: 0.2;
 	-webkit-transition:.25s;
 }
 .behance-small-baltyk:hover {
@@ -518,13 +518,16 @@ figure.caption.small:hover img.cover{
 	top: 7px;
 }
 .behance {
-	opacity: 0.5;
+	opacity: 0.2;
 	position: relative;
 	display: block;
 	float: right;
 	width: 32px;
 	height: 32px;
 	padding: 5px
+}
+.behance:hover {
+	opacity: 1;
 }
 .block1 {
 	padding: 15px 0;

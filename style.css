@@ -23,10 +23,6 @@ nav {
 	z-index:100;
 }
 
-nav a {
-	color: #B163A3;
-}
-
 .header{
 	list-style: none;
 	font-weight:400;
@@ -63,7 +59,8 @@ border:0;
 }
 
 nav a {
-text-decoration:none;
+	text-decoration:none;
+	color: #B163A3;
 	display:block;
 	float:right;
 	border: 2px solid #D385C5;
@@ -73,7 +70,7 @@ text-decoration:none;
 	padding: 0 10px;
 	margin: 0 12px;
 	font-size:1.25em;
-    -webkit-transition:.125s;
+  -webkit-transition:.125s;
 }
 
 
@@ -122,6 +119,7 @@ hr {
 	height: 352px;
 }
 
+
 #where, #what, #how{ padding:128px 0;}
 
 #who p{
@@ -131,6 +129,7 @@ font-size: 1.14em;
 	font-weight:300;
 	text-align:left;
 }
+
 
 .headline{
 padding:1em 0;
@@ -415,8 +414,4 @@ figure.caption.small:hover img.cover{
 	width: 32px;
 	height: 32px;
 	margin-top: 40px;
-
-
-span {
-	color: white;
 }

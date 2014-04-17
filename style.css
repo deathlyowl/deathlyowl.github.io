@@ -528,3 +528,37 @@ font-size:1.14em;
 font-weight:300;
 line-height:1.14 em;
 }
+
+input, textarea {
+    padding: 9px;
+    border: solid 1px #A05292;
+    outline: 0;
+    width: 200px;
+    background: #D385C5;
+    }
+
+textarea {
+    width: 400px;
+    max-width: 400px;
+    height: 150px;
+    line-height: 150%;
+    }
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    border: 2px solid white;
+    }
+
+.form label {
+    margin-left: 10px;
+    color: #D385C5;
+    }
+
+.submit input {
+    width: auto;
+    padding: 9px 15px;
+    background: #D385C5;
+    border: 0;
+    font-size: 14px;
+    color: #FFFFFF;
+    }
